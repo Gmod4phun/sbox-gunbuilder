@@ -3,10 +3,10 @@ using System.Text.Json.Serialization;
 
 public interface IAmmoSource
 {
-	Stack<Bullet> Bullets { get; }
+	public IEnumerable<Bullet> Pop( int amount = 1 );
 }
 
-public sealed class WeaponMagazine : Component, IAmmoSource
+public sealed class WeaponMagazine : Component, IAmmoSource, Component.ITriggerListener
 {
 	/// <summary>
 	/// The interactable that belongs to this weapon magazine. It'll always exist.
@@ -26,12 +26,12 @@ public sealed class WeaponMagazine : Component, IAmmoSource
 	/// <summary>
 	/// A list of the weapon's bullets.
 	/// </summary>
-	[Property, MakeDirty] public Stack<Bullet> Bullets { get; set; }
+	[Property] public Stack<Bullet> Bullets { get; set; }
 
 	/// <summary>
 	/// Debugging
 	/// </summary>
-	[Property, JsonIgnore] public int ChamberCount => Bullets.Count;
+	[Property, JsonIgnore] public int BulletCount => Bullets.Count;
 
 	/// <summary>
 	/// What's the ammo capacity for this gun?
@@ -39,11 +39,26 @@ public sealed class WeaponMagazine : Component, IAmmoSource
 	[Property] public int BulletCapacity { get; set; } = 30;
 
 	/// <summary>
+	/// How many bullets by default?
+	/// </summary>
+	[Property] public int DefaultBulletCapacity { get; set; } = 0;
+
+	/// <summary>
+	/// Which bullet caliber fits in here?
+	/// </summary>
+	[Property] public BulletCaliber Caliber { get; set; }
+
+	/// <summary>
 	/// Mainly for development - but negates needing ammo in the magazine to fire a gun.
 	/// </summary>
 	[Property] public bool IsInfiniteAmmo { get; set; } = false;
 
 	[Property] public int AmmoBodygroup { get; set; } = 0;
+
+	/// <summary>
+	/// Called when inserting a bullet manually into the mag.
+	/// </summary>
+	[Property] public SoundEvent OnChamberSound { get; set; }
 
 	/// <summary>
 	/// Does this magazine have any ammo?
@@ -56,22 +71,42 @@ public sealed class WeaponMagazine : Component, IAmmoSource
 	protected override void OnStart()
 	{
 		// Push the bullet capacity into the gun
-		for ( int i = 0; i < BulletCapacity; i++ )
+		for ( int i = 0; i < DefaultBulletCapacity; i++ )
 		{
-			Push( new Bullet() );
+			Push( new Bullet()
+			{
+				Caliber = Caliber
+			} );
 		}
+	}
+
+	void UpdateMesh()
+	{
+		Renderer?.SetBodyGroup( AmmoBodygroup, Bullets.Count > 0 ? 0 : 1 );
 	}
 
 	/// <summary>
 	/// Adds a bullet to the top of the pile.
 	/// </summary>
 	/// <param name="bullets"></param>
-	public void Push( params Bullet[] bullets )
+	public int Push( params Bullet[] bullets )
 	{
+		// Can't add more bullets if full!
+		if ( Bullets.Count >= BulletCapacity ) return 0;
+
+		int pushed = 0;
 		foreach ( var bullet in bullets )
 		{
-			Bullets.Push( bullet );
+			if ( bullet.Caliber == Caliber )
+			{
+				pushed++;
+				Bullets.Push( bullet );
+			}
 		}
+
+		if ( pushed > 0 ) UpdateMesh();
+
+		return pushed;
 	}
 
 	public IEnumerable<Bullet> Pop( int amount = 1 )
@@ -80,13 +115,40 @@ public sealed class WeaponMagazine : Component, IAmmoSource
 
 		for ( int i = 0; i < amount; i++ )
 		{
-			popped.Add( Bullets.Pop() );
+			if ( Bullets.TryPop( out var bullet ) )
+			{
+				popped.Add( bullet );
+			}
+			else break;
 		}
+
+		if ( amount > 0 ) UpdateMesh();
+
 		return popped;
 	}
 
-	protected override void OnDirty()
+	public bool IsCompatibleBullet( Bullet bullet )
 	{
-		Renderer?.SetBodyGroup( AmmoBodygroup, Bullets.Count > 0 ? 0 : 1 );
+		return Caliber == bullet.Caliber;
+	}
+
+	void ITriggerListener.OnTriggerEnter( Sandbox.Collider other )
+	{
+		if ( other.GameObject.Root.Components.Get<BulletComponent>() is { } bulletComponent )
+		{
+			if ( Push( bulletComponent.Bullet ) > 0 )
+			{
+				var interactable = bulletComponent.Components.Get<Interactable>();
+				if ( interactable is not null )
+				{
+					interactable.ClearAllInteractions();
+				}
+
+				if ( OnChamberSound is not null )
+					Sound.Play( OnChamberSound, Transform.Position );
+
+				other.GameObject.Root.Destroy();
+			}
+		}
 	}
 }
