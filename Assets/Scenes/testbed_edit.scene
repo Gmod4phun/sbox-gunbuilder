@@ -2106,7 +2106,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -2151,6 +2152,7 @@
                 "Ring": 1,
                 "Pinky": 1
               },
+              "PresetDebugging": false,
               "PrimaryGrabPoint": {
                 "_type": "component",
                 "component_id": "0d7f26fd-4286-483e-8f7b-a28e2e6c0ecb",
@@ -2301,7 +2303,8 @@
                     "Middle": 0.3,
                     "Ring": 0.4,
                     "Pinky": 0.3
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -2396,7 +2399,8 @@
                     "Middle": 1,
                     "Ring": 1,
                     "Pinky": 1
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -2500,6 +2504,7 @@
               "__type": "WeaponChamber",
               "__guid": "dd6b2201-2ff1-4d07-9701-e2880a261066",
               "AutoChamber": false,
+              "CanManuallyFeed": true,
               "Chamber": [],
               "ChamberCapacity": 1,
               "ChamberCount": 0
@@ -3550,7 +3555,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -3595,6 +3601,7 @@
                 "Ring": 1,
                 "Pinky": 1
               },
+              "PresetDebugging": false,
               "PrimaryGrabPoint": {
                 "_type": "component",
                 "component_id": "bb20a869-0605-4b4e-b18e-8b304f363987",
@@ -3745,7 +3752,8 @@
                     "Middle": 0.3,
                     "Ring": 0.4,
                     "Pinky": 0.3
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -3840,7 +3848,8 @@
                     "Middle": 1,
                     "Ring": 1,
                     "Pinky": 1
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -3944,6 +3953,7 @@
               "__type": "WeaponChamber",
               "__guid": "f790e1f4-a5fe-4f2c-8d0f-ac5d20f34587",
               "AutoChamber": false,
+              "CanManuallyFeed": true,
               "Chamber": [],
               "ChamberCapacity": 1,
               "ChamberCount": 0
@@ -4851,7 +4861,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -4978,7 +4989,8 @@
                     "Middle": 1,
                     "Ring": 1,
                     "Pinky": 1
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -5048,6 +5060,7 @@
               "__type": "WeaponChamber",
               "__guid": "bf0c3625-6d75-45c3-9080-e89289dc095f",
               "AutoChamber": false,
+              "CanManuallyFeed": true,
               "Chamber": [],
               "ChamberCapacity": 1,
               "ChamberCount": 0
@@ -5955,7 +5968,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -6082,7 +6096,8 @@
                     "Middle": 1,
                     "Ring": 1,
                     "Pinky": 1
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -6152,6 +6167,7 @@
               "__type": "WeaponChamber",
               "__guid": "987f0005-e97f-44bf-a91d-2d9b73521f61",
               "AutoChamber": false,
+              "CanManuallyFeed": true,
               "Chamber": [],
               "ChamberCapacity": 1,
               "ChamberCount": 0
@@ -6290,7 +6306,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -6334,6 +6351,7 @@
                 "Ring": 1,
                 "Pinky": 1
               },
+              "PresetDebugging": false,
               "PrimaryGrabPoint": {
                 "_type": "component",
                 "component_id": "9a9393ad-b963-4989-ace0-4aaaabe7cb4c",
@@ -6415,6 +6433,7 @@
               "__type": "WeaponChamber",
               "__guid": "5b05cdd3-85cf-44eb-b0cf-133b13d269e6",
               "AutoChamber": true,
+              "CanManuallyFeed": true,
               "Chamber": [],
               "ChamberCapacity": 1,
               "ChamberCount": 0
@@ -6484,7 +6503,8 @@
                     "Middle": 1,
                     "Ring": 1,
                     "Pinky": 1
-                  }
+                  },
+                  "PresetDebugging": false
                 },
                 {
                   "__type": "PointInteractable",
@@ -6586,8 +6606,10 @@
           "__guid": "d2c81459-45c6-4c42-aec3-c897de5ab2fd",
           "AmmoBodygroup": 0,
           "BulletCapacity": 10,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
@@ -6667,7 +6689,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -6682,9 +6705,9 @@
       ]
     },
     {
-      "__guid": "157608e4-62b4-44a2-bce5-c4cd953238fb",
+      "__guid": "b5abc844-c421-4c0e-ba6b-b0be003088dd",
       "Name": "USP Magazine (1)",
-      "Position": "15.45941,26.78572,38.67424",
+      "Position": "17.21566,26.31514,38.67425",
       "Rotation": "0.09229589,0.7010576,0.7010573,0.09229603",
       "Tags": "magazine",
       "Enabled": true,
@@ -6693,18 +6716,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "c7d89e8f-d278-4bdc-a4c7-68baa845d0f7",
+          "__guid": "c54c22db-9c52-49de-a4c0-80d690fb3dd8",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "f1475335-e9f1-43ef-8da1-e43c44101e13",
-            "go": "157608e4-62b4-44a2-bce5-c4cd953238fb",
+            "component_id": "bf3432f9-8134-4076-9a3e-11213bbff6e0",
+            "go": "b5abc844-c421-4c0e-ba6b-b0be003088dd",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "f1475335-e9f1-43ef-8da1-e43c44101e13",
+          "__guid": "bf3432f9-8134-4076-9a3e-11213bbff6e0",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -6716,7 +6739,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "282892e2-40a4-4eca-86fa-3cd5aa2a254e",
+          "__guid": "793889d6-bfb4-4b27-ac08-19e52287cd4e",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -6725,41 +6748,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "f9f47155-185b-4567-bf1f-9f1bec882580",
+          "__guid": "e2185a0e-7d7f-449f-a06c-914061b2540f",
           "AmmoBodygroup": 0,
           "BulletCapacity": 10,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "227f718d-acd7-4690-bbde-37e439b2af86",
-            "go": "85b29ed3-1c0c-413a-833b-6e1b6fbdbb33",
+            "component_id": "ad0e3ad3-864d-4a3d-bcd6-8a40208bd94d",
+            "go": "f29d7114-ae90-4839-a583-289a263e1621",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "8664d9d6-eee4-4804-ba29-6d4b7c456644",
+          "__guid": "7e33eb69-cc51-496f-aa06-d39a2f49306d",
           "AttachSound": "sounds/weapons/usp/usp_magazine_load.sound",
           "DetachSound": "sounds/weapons/usp/usp_magazine_unload.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "c7d89e8f-d278-4bdc-a4c7-68baa845d0f7",
-            "go": "157608e4-62b4-44a2-bce5-c4cd953238fb",
+            "component_id": "c54c22db-9c52-49de-a4c0-80d690fb3dd8",
+            "go": "b5abc844-c421-4c0e-ba6b-b0be003088dd",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "f1475335-e9f1-43ef-8da1-e43c44101e13",
-            "go": "157608e4-62b4-44a2-bce5-c4cd953238fb",
+            "component_id": "bf3432f9-8134-4076-9a3e-11213bbff6e0",
+            "go": "b5abc844-c421-4c0e-ba6b-b0be003088dd",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "85b29ed3-1c0c-413a-833b-6e1b6fbdbb33",
+          "__guid": "f29d7114-ae90-4839-a583-289a263e1621",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -6768,7 +6793,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "227f718d-acd7-4690-bbde-37e439b2af86",
+              "__guid": "ad0e3ad3-864d-4a3d-bcd6-8a40208bd94d",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_pistol_usp/v_usp_magazine.vmdl",
@@ -6778,7 +6803,7 @@
           ]
         },
         {
-          "__guid": "f0c7f1c9-2de8-4285-b551-ba3323ae559a",
+          "__guid": "c2b0d807-4c03-4218-b930-8ca974da2ce3",
           "Name": "Magazine Grab Point",
           "Position": "-0.6534327,-0.05125694,-3.460149",
           "Rotation": "0.00000006332994,-0.6087678,-0.00000002980232,0.7933573",
@@ -6789,18 +6814,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "5aa1ba00-d992-4f43-8b75-1d3d5ca99caa",
+              "__guid": "959c7466-d509-45c1-933c-32de83e1393e",
               "Collider": {
                 "_type": "component",
-                "component_id": "667c4149-703b-4451-826c-fb871d3344d2",
-                "go": "f0c7f1c9-2de8-4285-b551-ba3323ae559a",
+                "component_id": "e65a38db-f07d-4236-8ee1-f4a2629ad44b",
+                "go": "c2b0d807-4c03-4218-b930-8ca974da2ce3",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "c7d89e8f-d278-4bdc-a4c7-68baa845d0f7",
-                "go": "157608e4-62b4-44a2-bce5-c4cd953238fb",
+                "component_id": "c54c22db-9c52-49de-a4c0-80d690fb3dd8",
+                "go": "b5abc844-c421-4c0e-ba6b-b0be003088dd",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -6809,11 +6834,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "667c4149-703b-4451-826c-fb871d3344d2",
+              "__guid": "e65a38db-f07d-4236-8ee1-f4a2629ad44b",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -6824,9 +6850,9 @@
       ]
     },
     {
-      "__guid": "5b153d52-3a25-4c6c-91b1-64bdfc9167b0",
+      "__guid": "2f4bbd9f-e3ab-4df2-bcd5-076f8c4a7c33",
       "Name": "USP Magazine (2)",
-      "Position": "11.59571,27.821,38.67423",
+      "Position": "15.02281,26.90271,38.67425",
       "Rotation": "0.09229589,0.7010576,0.7010573,0.09229603",
       "Tags": "magazine",
       "Enabled": true,
@@ -6835,18 +6861,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "5a99f1a6-3323-4134-a1f9-e35ed08a348e",
+          "__guid": "84590d30-ca68-407f-9d1e-473c721d01fa",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "8a54398f-3b1e-427e-ad45-489024176c3f",
-            "go": "5b153d52-3a25-4c6c-91b1-64bdfc9167b0",
+            "component_id": "dd6f0494-b5be-4b92-853f-4bd50964077e",
+            "go": "2f4bbd9f-e3ab-4df2-bcd5-076f8c4a7c33",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "8a54398f-3b1e-427e-ad45-489024176c3f",
+          "__guid": "dd6f0494-b5be-4b92-853f-4bd50964077e",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -6858,7 +6884,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "f871e311-7010-4229-a123-091ae6cd5ba9",
+          "__guid": "8f16f2a8-5379-4176-b50e-277552aad0ae",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -6867,41 +6893,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "b95f200d-e7fa-42d1-80e4-c54377191a54",
+          "__guid": "e8a566b6-5d07-4228-b5c0-064f469161c8",
           "AmmoBodygroup": 0,
           "BulletCapacity": 10,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "842e2048-34d7-4c40-87a4-9ba5df21a906",
-            "go": "8a8521f0-a317-4eae-aed1-1078f92fd7e0",
+            "component_id": "5938e115-0988-4d99-b541-e39de5973eb1",
+            "go": "6f8561a2-08b7-45f0-a5fd-e96200ef0dac",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "23966bfc-b37b-45f7-93fd-b7039a0518e5",
+          "__guid": "bd3bb2db-f3fa-45fa-97d7-b7e6a86ced56",
           "AttachSound": "sounds/weapons/usp/usp_magazine_load.sound",
           "DetachSound": "sounds/weapons/usp/usp_magazine_unload.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "5a99f1a6-3323-4134-a1f9-e35ed08a348e",
-            "go": "5b153d52-3a25-4c6c-91b1-64bdfc9167b0",
+            "component_id": "84590d30-ca68-407f-9d1e-473c721d01fa",
+            "go": "2f4bbd9f-e3ab-4df2-bcd5-076f8c4a7c33",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "8a54398f-3b1e-427e-ad45-489024176c3f",
-            "go": "5b153d52-3a25-4c6c-91b1-64bdfc9167b0",
+            "component_id": "dd6f0494-b5be-4b92-853f-4bd50964077e",
+            "go": "2f4bbd9f-e3ab-4df2-bcd5-076f8c4a7c33",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "8a8521f0-a317-4eae-aed1-1078f92fd7e0",
+          "__guid": "6f8561a2-08b7-45f0-a5fd-e96200ef0dac",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -6910,7 +6938,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "842e2048-34d7-4c40-87a4-9ba5df21a906",
+              "__guid": "5938e115-0988-4d99-b541-e39de5973eb1",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_pistol_usp/v_usp_magazine.vmdl",
@@ -6920,7 +6948,7 @@
           ]
         },
         {
-          "__guid": "adf9e629-60a4-4bcd-9b19-99bea9768e70",
+          "__guid": "349b78ab-216a-4440-a636-2f636af40e1b",
           "Name": "Magazine Grab Point",
           "Position": "-0.6534327,-0.05125694,-3.460149",
           "Rotation": "0.00000006332994,-0.6087678,-0.00000002980232,0.7933573",
@@ -6931,18 +6959,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "e34efa6b-c5ad-4622-836d-eb06a5ebec9f",
+              "__guid": "95ddea40-b655-463f-a487-aea2b1c53216",
               "Collider": {
                 "_type": "component",
-                "component_id": "c1c100f2-82d0-4590-aff1-29e83f20ccda",
-                "go": "adf9e629-60a4-4bcd-9b19-99bea9768e70",
+                "component_id": "70ca75f7-ad35-43a8-958b-602815ac53c2",
+                "go": "349b78ab-216a-4440-a636-2f636af40e1b",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "5a99f1a6-3323-4134-a1f9-e35ed08a348e",
-                "go": "5b153d52-3a25-4c6c-91b1-64bdfc9167b0",
+                "component_id": "84590d30-ca68-407f-9d1e-473c721d01fa",
+                "go": "2f4bbd9f-e3ab-4df2-bcd5-076f8c4a7c33",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -6951,11 +6979,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "c1c100f2-82d0-4590-aff1-29e83f20ccda",
+              "__guid": "70ca75f7-ad35-43a8-958b-602815ac53c2",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -6966,9 +6995,9 @@
       ]
     },
     {
-      "__guid": "48ff9590-ca0a-4c3a-baed-25f5e0f45f54",
+      "__guid": "2329cd69-bae0-4d56-b3ec-eba2f4521865",
       "Name": "USP Magazine (3)",
-      "Position": "7.732009,28.85628,38.67423",
+      "Position": "13.15468,27.40328,38.67425",
       "Rotation": "0.09229589,0.7010576,0.7010573,0.09229603",
       "Tags": "magazine",
       "Enabled": true,
@@ -6977,18 +7006,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "5d6fd283-6e04-4a77-abae-939d4672cb0a",
+          "__guid": "f74fe1a6-8769-4604-9f66-6ea53d6582f2",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "e9b78f47-8a14-4225-b626-4a323eb2d496",
-            "go": "48ff9590-ca0a-4c3a-baed-25f5e0f45f54",
+            "component_id": "351b6198-4849-487e-bb5c-f1e12907823f",
+            "go": "2329cd69-bae0-4d56-b3ec-eba2f4521865",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "e9b78f47-8a14-4225-b626-4a323eb2d496",
+          "__guid": "351b6198-4849-487e-bb5c-f1e12907823f",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7000,7 +7029,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "c38c1bc0-ceca-4946-9375-25800ae9178b",
+          "__guid": "cc3de96e-d2cf-4043-a9f9-2efdc4acf66e",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -7009,41 +7038,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "f7bcbc1e-4210-4352-be54-ef42f2151b35",
+          "__guid": "35fc91ef-f361-4db8-8ec2-84bee7531967",
           "AmmoBodygroup": 0,
           "BulletCapacity": 10,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "a46a9eb7-9aa5-4bc5-95f8-24ae1644d8f2",
-            "go": "94d87613-3d34-44a0-b338-35252f12b534",
+            "component_id": "e01ad7e1-c4c9-4755-963e-b0c2781c09cf",
+            "go": "8972b0e7-4d5a-4f98-b064-9e6f26355fea",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "23b84bfb-903c-4454-aac6-6c7e802e584b",
+          "__guid": "3a59e858-1ebb-454e-8658-c0b8c3898c48",
           "AttachSound": "sounds/weapons/usp/usp_magazine_load.sound",
           "DetachSound": "sounds/weapons/usp/usp_magazine_unload.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "5d6fd283-6e04-4a77-abae-939d4672cb0a",
-            "go": "48ff9590-ca0a-4c3a-baed-25f5e0f45f54",
+            "component_id": "f74fe1a6-8769-4604-9f66-6ea53d6582f2",
+            "go": "2329cd69-bae0-4d56-b3ec-eba2f4521865",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "e9b78f47-8a14-4225-b626-4a323eb2d496",
-            "go": "48ff9590-ca0a-4c3a-baed-25f5e0f45f54",
+            "component_id": "351b6198-4849-487e-bb5c-f1e12907823f",
+            "go": "2329cd69-bae0-4d56-b3ec-eba2f4521865",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "94d87613-3d34-44a0-b338-35252f12b534",
+          "__guid": "8972b0e7-4d5a-4f98-b064-9e6f26355fea",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -7052,7 +7083,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "a46a9eb7-9aa5-4bc5-95f8-24ae1644d8f2",
+              "__guid": "e01ad7e1-c4c9-4755-963e-b0c2781c09cf",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_pistol_usp/v_usp_magazine.vmdl",
@@ -7062,7 +7093,7 @@
           ]
         },
         {
-          "__guid": "d8048f5e-5539-440e-a2c9-adf0b4df3b6f",
+          "__guid": "8bdb8a42-f351-4b01-b102-e7ec8d7265fe",
           "Name": "Magazine Grab Point",
           "Position": "-0.6534327,-0.05125694,-3.460149",
           "Rotation": "0.00000006332994,-0.6087678,-0.00000002980232,0.7933573",
@@ -7073,18 +7104,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "3a5e5ff8-87e4-43a4-a997-d46e827db6df",
+              "__guid": "b09a038a-bc8d-4fea-9ceb-c3f59363359e",
               "Collider": {
                 "_type": "component",
-                "component_id": "239cc57b-7a88-4647-bab2-cf6061ecaf38",
-                "go": "d8048f5e-5539-440e-a2c9-adf0b4df3b6f",
+                "component_id": "4f4aba0e-27e1-445f-828b-050d87c4501d",
+                "go": "8bdb8a42-f351-4b01-b102-e7ec8d7265fe",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "5d6fd283-6e04-4a77-abae-939d4672cb0a",
-                "go": "48ff9590-ca0a-4c3a-baed-25f5e0f45f54",
+                "component_id": "f74fe1a6-8769-4604-9f66-6ea53d6582f2",
+                "go": "2329cd69-bae0-4d56-b3ec-eba2f4521865",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -7093,11 +7124,302 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "239cc57b-7a88-4647-bab2-cf6061ecaf38",
+              "__guid": "4f4aba0e-27e1-445f-828b-050d87c4501d",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 1.5,
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "fd830b93-fa76-478e-9d3e-7ad55250c4eb",
+      "Name": "USP Magazine (4)",
+      "Position": "11.05607,27.9656,38.67424",
+      "Rotation": "0.09229589,0.7010576,0.7010573,0.09229603",
+      "Tags": "magazine",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Interactable",
+          "__guid": "1d0e6269-84df-4b2e-bb12-382c8fcaa22b",
+          "MassScale": 1,
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "af742468-d2aa-42f6-a085-59b1b04f6e84",
+            "go": "fd830b93-fa76-478e-9d3e-7ad55250c4eb",
+            "component_type": "Rigidbody"
+          }
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "af742468-d2aa-42f6-a085-59b1b04f6e84",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 50,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "5b19ee6e-daa3-4e9e-859b-755e4138ab2f",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "3,1,6",
+          "Static": false,
+          "Surface": "surfaces/metal.weapon.surface"
+        },
+        {
+          "__type": "WeaponMagazine",
+          "__guid": "39f67028-73d1-4a2e-943b-5493eae6a203",
+          "AmmoBodygroup": 0,
+          "BulletCapacity": 10,
+          "BulletCount": 0,
+          "Bullets": [],
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
+          "IsInfiniteAmmo": false,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "a05d67b0-49a9-4491-a95a-666a787401e9",
+            "go": "4dfcfd75-b9b4-4498-bbfd-575787e51d8f",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Attachable",
+          "__guid": "2ee1bfaa-05d3-4443-b498-56a97cb8cbfe",
+          "AttachSound": "sounds/weapons/usp/usp_magazine_load.sound",
+          "DetachSound": "sounds/weapons/usp/usp_magazine_unload.sound",
+          "Interactable": {
+            "_type": "component",
+            "component_id": "1d0e6269-84df-4b2e-bb12-382c8fcaa22b",
+            "go": "fd830b93-fa76-478e-9d3e-7ad55250c4eb",
+            "component_type": "Interactable"
+          },
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "af742468-d2aa-42f6-a085-59b1b04f6e84",
+            "go": "fd830b93-fa76-478e-9d3e-7ad55250c4eb",
+            "component_type": "Rigidbody"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "4dfcfd75-b9b4-4498-bbfd-575787e51d8f",
+          "Name": "Model",
+          "Position": "0.03938294,0.00000001408443,0.000000004694812",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "a05d67b0-49a9-4491-a95a-666a787401e9",
+              "BodyGroups": 2,
+              "CreateBoneObjects": false,
+              "Model": "models/weapons/sbox_pistol_usp/v_usp_magazine.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "5420a3a7-2917-4d22-bade-a61b4a1f8528",
+          "Name": "Magazine Grab Point",
+          "Position": "-0.6534327,-0.05125694,-3.460149",
+          "Rotation": "0.00000006332994,-0.6087678,-0.00000002980232,0.7933573",
+          "Tags": "trigger",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "GrabPoint",
+              "__guid": "d5f5e722-3f54-49c6-b180-b1c2c12d2445",
+              "Collider": {
+                "_type": "component",
+                "component_id": "f5410338-d05e-4f9b-b755-4e141a43c372",
+                "go": "5420a3a7-2917-4d22-bade-a61b4a1f8528",
+                "component_type": "SphereCollider"
+              },
+              "GrabInput": "Grip",
+              "Interactable": {
+                "_type": "component",
+                "component_id": "1d0e6269-84df-4b2e-bb12-382c8fcaa22b",
+                "go": "fd830b93-fa76-478e-9d3e-7ad55250c4eb",
+                "component_type": "Interactable"
+              },
+              "Preset": {
+                "Thumb": 1,
+                "Index": 1,
+                "Middle": 1,
+                "Ring": 1,
+                "Pinky": 1
+              },
+              "PresetDebugging": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "f5410338-d05e-4f9b-b755-4e141a43c372",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 1.5,
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "5ae4d020-10f2-4c5c-a49a-c96407a25610",
+      "Name": "USP Magazine (5)",
+      "Position": "9.007656,28.51447,38.67424",
+      "Rotation": "0.09229589,0.7010576,0.7010573,0.09229603",
+      "Tags": "magazine",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Interactable",
+          "__guid": "ff44ab1e-2335-48a9-bd23-03679b894f64",
+          "MassScale": 1,
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "d5f2db87-9531-4ba1-b947-2ba9b0071d11",
+            "go": "5ae4d020-10f2-4c5c-a49a-c96407a25610",
+            "component_type": "Rigidbody"
+          }
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "d5f2db87-9531-4ba1-b947-2ba9b0071d11",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 50,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "a1609175-044d-4578-be02-1b99e4cf5b56",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "3,1,6",
+          "Static": false,
+          "Surface": "surfaces/metal.weapon.surface"
+        },
+        {
+          "__type": "WeaponMagazine",
+          "__guid": "51aa7462-4552-4c5d-a322-d0af31b75941",
+          "AmmoBodygroup": 0,
+          "BulletCapacity": 10,
+          "BulletCount": 0,
+          "Bullets": [],
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 10,
+          "IsInfiniteAmmo": false,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "116ac7eb-e021-47d1-b666-12332bdc38c3",
+            "go": "83bd307a-3377-4703-8948-fef2de428a96",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Attachable",
+          "__guid": "b0b88b79-c3f7-45bd-8a1e-88af31cf0699",
+          "AttachSound": "sounds/weapons/usp/usp_magazine_load.sound",
+          "DetachSound": "sounds/weapons/usp/usp_magazine_unload.sound",
+          "Interactable": {
+            "_type": "component",
+            "component_id": "ff44ab1e-2335-48a9-bd23-03679b894f64",
+            "go": "5ae4d020-10f2-4c5c-a49a-c96407a25610",
+            "component_type": "Interactable"
+          },
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "d5f2db87-9531-4ba1-b947-2ba9b0071d11",
+            "go": "5ae4d020-10f2-4c5c-a49a-c96407a25610",
+            "component_type": "Rigidbody"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "83bd307a-3377-4703-8948-fef2de428a96",
+          "Name": "Model",
+          "Position": "0.03938294,0.00000001408443,0.000000004694812",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "116ac7eb-e021-47d1-b666-12332bdc38c3",
+              "BodyGroups": 2,
+              "CreateBoneObjects": false,
+              "Model": "models/weapons/sbox_pistol_usp/v_usp_magazine.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "30a372bb-2b10-4716-8720-3f91b041e4aa",
+          "Name": "Magazine Grab Point",
+          "Position": "-0.6534327,-0.05125694,-3.460149",
+          "Rotation": "0.00000006332994,-0.6087678,-0.00000002980232,0.7933573",
+          "Tags": "trigger",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "GrabPoint",
+              "__guid": "fe486ca7-592c-40a4-877e-57f2582c7da6",
+              "Collider": {
+                "_type": "component",
+                "component_id": "a4f4b977-c3f0-4546-848f-02be0d4095f6",
+                "go": "30a372bb-2b10-4716-8720-3f91b041e4aa",
+                "component_type": "SphereCollider"
+              },
+              "GrabInput": "Grip",
+              "Interactable": {
+                "_type": "component",
+                "component_id": "ff44ab1e-2335-48a9-bd23-03679b894f64",
+                "go": "5ae4d020-10f2-4c5c-a49a-c96407a25610",
+                "component_type": "Interactable"
+              },
+              "Preset": {
+                "Thumb": 1,
+                "Index": 1,
+                "Middle": 1,
+                "Ring": 1,
+                "Pinky": 1
+              },
+              "PresetDebugging": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "a4f4b977-c3f0-4546-848f-02be0d4095f6",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -7110,7 +7432,7 @@
     {
       "__guid": "e508fd43-e580-4b26-b4ed-6e957b3f10dc",
       "Name": "MP5 Magazine",
-      "Position": "36.14719,11.88907,38.73824",
+      "Position": "36.14719,13.08473,38.73824",
       "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
       "Tags": "magazine",
       "Enabled": true,
@@ -7154,8 +7476,10 @@
           "__guid": "8c454b87-a10b-409b-8fa3-357f07301d90",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
@@ -7235,7 +7559,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -7250,9 +7575,9 @@
       ]
     },
     {
-      "__guid": "90320d7a-35bf-44f3-b7ee-fc8f583e3779",
+      "__guid": "33489f43-297b-4776-abd7-f78afa1592fe",
       "Name": "MP5 Magazine (1)",
-      "Position": "36.14718,9.924973,38.73824",
+      "Position": "36.14718,10.55823,38.73824",
       "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
       "Tags": "magazine",
       "Enabled": true,
@@ -7261,18 +7586,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "4b3d8f11-0835-47aa-893f-c593f7266ee2",
+          "__guid": "7f2fed10-a26c-41a7-ab12-2cc5c139ee14",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "e0b121e3-7115-4dfe-9a3c-5dcc82c446c0",
-            "go": "90320d7a-35bf-44f3-b7ee-fc8f583e3779",
+            "component_id": "3786013f-071a-4db9-a68b-dcf8159d8e90",
+            "go": "33489f43-297b-4776-abd7-f78afa1592fe",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "e0b121e3-7115-4dfe-9a3c-5dcc82c446c0",
+          "__guid": "3786013f-071a-4db9-a68b-dcf8159d8e90",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7284,7 +7609,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "cdd10651-83ef-4752-a6ac-3550c17363c1",
+          "__guid": "67b4c8a8-b74a-47b0-ab6a-0a3d9dfc8c05",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -7293,41 +7618,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "3f69de4d-16f9-4e28-b715-4d0fd1ba374d",
+          "__guid": "c74bd094-5b55-4051-aee7-07741196af4f",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "983735b0-bdbd-4b53-9c47-2c04dc8a6ffe",
-            "go": "50955372-6261-4b93-9bff-7924afa55846",
+            "component_id": "090b7d70-8bc7-482d-b13e-f685aa082cfd",
+            "go": "3f220f8a-8d11-49c3-9bd4-2acb9bb12bc8",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "0e3d2ba6-78ae-4fd9-ac17-1762b2b3b6bc",
+          "__guid": "2a56964b-13f4-4ab4-8d90-1b1212a39913",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "4b3d8f11-0835-47aa-893f-c593f7266ee2",
-            "go": "90320d7a-35bf-44f3-b7ee-fc8f583e3779",
+            "component_id": "7f2fed10-a26c-41a7-ab12-2cc5c139ee14",
+            "go": "33489f43-297b-4776-abd7-f78afa1592fe",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "e0b121e3-7115-4dfe-9a3c-5dcc82c446c0",
-            "go": "90320d7a-35bf-44f3-b7ee-fc8f583e3779",
+            "component_id": "3786013f-071a-4db9-a68b-dcf8159d8e90",
+            "go": "33489f43-297b-4776-abd7-f78afa1592fe",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "50955372-6261-4b93-9bff-7924afa55846",
+          "__guid": "3f220f8a-8d11-49c3-9bd4-2acb9bb12bc8",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -7336,7 +7663,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "983735b0-bdbd-4b53-9c47-2c04dc8a6ffe",
+              "__guid": "090b7d70-8bc7-482d-b13e-f685aa082cfd",
               "BodyGroups": 18446744073709551614,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmdl",
@@ -7346,7 +7673,7 @@
           ]
         },
         {
-          "__guid": "3d69d451-d885-47dd-a155-e930959c80dc",
+          "__guid": "46892a4b-39cc-41cc-9845-f501853c171f",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -7357,18 +7684,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "07012ded-7b5d-4e81-aba6-b5f4520ff8e5",
+              "__guid": "fee76901-f1c2-4db2-9858-b29f91980d3d",
               "Collider": {
                 "_type": "component",
-                "component_id": "5dfa4484-e7a1-46b5-b3d7-68c6d916cdef",
-                "go": "3d69d451-d885-47dd-a155-e930959c80dc",
+                "component_id": "d2aceee4-168d-4a7e-bf37-ab8b21005d03",
+                "go": "46892a4b-39cc-41cc-9845-f501853c171f",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "4b3d8f11-0835-47aa-893f-c593f7266ee2",
-                "go": "90320d7a-35bf-44f3-b7ee-fc8f583e3779",
+                "component_id": "7f2fed10-a26c-41a7-ab12-2cc5c139ee14",
+                "go": "33489f43-297b-4776-abd7-f78afa1592fe",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -7377,11 +7704,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "5dfa4484-e7a1-46b5-b3d7-68c6d916cdef",
+              "__guid": "d2aceee4-168d-4a7e-bf37-ab8b21005d03",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -7392,9 +7720,9 @@
       ]
     },
     {
-      "__guid": "576d0607-f9a0-4af6-ac2d-138a2e0c89a1",
+      "__guid": "1f131faf-26cb-49dd-bf44-edea017b44ad",
       "Name": "MP5 Magazine (2)",
-      "Position": "36.14717,7.873558,38.73824",
+      "Position": "36.14718,8.233297,38.73825",
       "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
       "Tags": "magazine",
       "Enabled": true,
@@ -7403,18 +7731,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "65514ca8-0166-47f6-81b3-d3df89e6bf92",
+          "__guid": "132f1c07-f774-42b0-b9c2-4054c2d520fa",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "44534153-b0c6-4164-a57d-8acc719b1d1c",
-            "go": "576d0607-f9a0-4af6-ac2d-138a2e0c89a1",
+            "component_id": "ce7205cc-ce01-47bc-ac69-49a68b34ca9c",
+            "go": "1f131faf-26cb-49dd-bf44-edea017b44ad",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "44534153-b0c6-4164-a57d-8acc719b1d1c",
+          "__guid": "ce7205cc-ce01-47bc-ac69-49a68b34ca9c",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7426,7 +7754,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "c3db1296-1eeb-4ff5-9298-1247178285d1",
+          "__guid": "066ec340-058c-48a4-9414-fea428551894",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -7435,41 +7763,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "6418a33c-261b-48c8-a29d-14e9e952e428",
+          "__guid": "5dfa1043-f9fc-464f-891b-0fa3b8813b84",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "2a0d60c4-42ad-4480-8c97-39c889405ed8",
-            "go": "ace2483b-dd2f-4bae-96a1-14dc3126944c",
+            "component_id": "3ee849f4-dfec-43c0-9344-652e50ccad52",
+            "go": "480a1928-3b7c-4b3a-8a32-f68e62399ca0",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "62ebd9d3-caa2-45ec-a584-c26ffdc0c23d",
+          "__guid": "4b1a3652-579d-4918-b479-12cd76da8276",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "65514ca8-0166-47f6-81b3-d3df89e6bf92",
-            "go": "576d0607-f9a0-4af6-ac2d-138a2e0c89a1",
+            "component_id": "132f1c07-f774-42b0-b9c2-4054c2d520fa",
+            "go": "1f131faf-26cb-49dd-bf44-edea017b44ad",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "44534153-b0c6-4164-a57d-8acc719b1d1c",
-            "go": "576d0607-f9a0-4af6-ac2d-138a2e0c89a1",
+            "component_id": "ce7205cc-ce01-47bc-ac69-49a68b34ca9c",
+            "go": "1f131faf-26cb-49dd-bf44-edea017b44ad",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "ace2483b-dd2f-4bae-96a1-14dc3126944c",
+          "__guid": "480a1928-3b7c-4b3a-8a32-f68e62399ca0",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -7478,7 +7808,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "2a0d60c4-42ad-4480-8c97-39c889405ed8",
+              "__guid": "3ee849f4-dfec-43c0-9344-652e50ccad52",
               "BodyGroups": 18446744073709551614,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmdl",
@@ -7488,7 +7818,7 @@
           ]
         },
         {
-          "__guid": "7f19f86d-bc6b-444d-b54b-7d8337de06cd",
+          "__guid": "acfc6d65-f00d-441c-9083-33e733e64355",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -7499,18 +7829,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "4ab9bd82-e440-492b-bb69-2919f2bdd099",
+              "__guid": "a111e774-78ba-4a94-86cc-90a7e964ea28",
               "Collider": {
                 "_type": "component",
-                "component_id": "de3646e9-85fc-4f6b-a44f-2bad1346d4c7",
-                "go": "7f19f86d-bc6b-444d-b54b-7d8337de06cd",
+                "component_id": "41d7ed12-c6fa-4e65-9d0b-e9ef0522f573",
+                "go": "acfc6d65-f00d-441c-9083-33e733e64355",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "65514ca8-0166-47f6-81b3-d3df89e6bf92",
-                "go": "576d0607-f9a0-4af6-ac2d-138a2e0c89a1",
+                "component_id": "132f1c07-f774-42b0-b9c2-4054c2d520fa",
+                "go": "1f131faf-26cb-49dd-bf44-edea017b44ad",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -7519,11 +7849,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "de3646e9-85fc-4f6b-a44f-2bad1346d4c7",
+              "__guid": "41d7ed12-c6fa-4e65-9d0b-e9ef0522f573",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -7534,9 +7865,9 @@
       ]
     },
     {
-      "__guid": "4c8edb74-efba-47cf-81d2-688c6a52439f",
+      "__guid": "f1c42a36-464b-4121-b2df-e9a8ff6a0539",
       "Name": "MP5 Magazine (3)",
-      "Position": "36.14716,5.891999,38.73824",
+      "Position": "36.14717,5.994301,38.73825",
       "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
       "Tags": "magazine",
       "Enabled": true,
@@ -7545,18 +7876,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "64ac4659-32ac-4eb6-a42e-d8476c4fb2db",
+          "__guid": "ef2422f2-074b-439c-91ea-53c9777f4589",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "c6dd199d-b7a4-4a10-9ff6-ad595ad43097",
-            "go": "4c8edb74-efba-47cf-81d2-688c6a52439f",
+            "component_id": "5079e087-f01e-46f0-8dbe-a3f6fb6775e4",
+            "go": "f1c42a36-464b-4121-b2df-e9a8ff6a0539",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "c6dd199d-b7a4-4a10-9ff6-ad595ad43097",
+          "__guid": "5079e087-f01e-46f0-8dbe-a3f6fb6775e4",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7568,7 +7899,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "29ba57ca-198a-4b8b-ad5e-7052c85dd91c",
+          "__guid": "df406873-c5f9-4cf3-bdc4-409392559481",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -7577,41 +7908,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "ab92799e-1685-4b81-8d57-d0a417010e2d",
+          "__guid": "35d55f2b-55a9-46bd-8917-ff7d2e4a18ec",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "807df42a-fabd-4ac0-9482-d65e5b1f1818",
-            "go": "01c47a4d-a92b-4f86-9277-8e520aac99ef",
+            "component_id": "65de9c9a-20b0-4dfe-a17d-173934f3f7b8",
+            "go": "fe7b4cf9-c26c-4086-9a20-763a3762a8e1",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "65fd2aa6-dd87-4960-a244-a09c5dbcfca7",
+          "__guid": "68da16a2-e442-4fa5-a52e-3e4642a698e9",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "64ac4659-32ac-4eb6-a42e-d8476c4fb2db",
-            "go": "4c8edb74-efba-47cf-81d2-688c6a52439f",
+            "component_id": "ef2422f2-074b-439c-91ea-53c9777f4589",
+            "go": "f1c42a36-464b-4121-b2df-e9a8ff6a0539",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "c6dd199d-b7a4-4a10-9ff6-ad595ad43097",
-            "go": "4c8edb74-efba-47cf-81d2-688c6a52439f",
+            "component_id": "5079e087-f01e-46f0-8dbe-a3f6fb6775e4",
+            "go": "f1c42a36-464b-4121-b2df-e9a8ff6a0539",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "01c47a4d-a92b-4f86-9277-8e520aac99ef",
+          "__guid": "fe7b4cf9-c26c-4086-9a20-763a3762a8e1",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -7620,7 +7953,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "807df42a-fabd-4ac0-9482-d65e5b1f1818",
+              "__guid": "65de9c9a-20b0-4dfe-a17d-173934f3f7b8",
               "BodyGroups": 18446744073709551614,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmdl",
@@ -7630,7 +7963,7 @@
           ]
         },
         {
-          "__guid": "7f2bff55-c700-402b-a06c-17e5100421cb",
+          "__guid": "936802aa-20e1-4c50-89d7-3f896630018b",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -7641,18 +7974,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "9e79928d-779c-4fa0-8903-86af992fe708",
+              "__guid": "a21ec050-b944-4033-8d11-f991983cc807",
               "Collider": {
                 "_type": "component",
-                "component_id": "aa3e5646-6ffb-49a6-ab9c-450075a565b1",
-                "go": "7f2bff55-c700-402b-a06c-17e5100421cb",
+                "component_id": "fb50c8e0-f24d-4ba2-a8e7-e533d40b44f1",
+                "go": "936802aa-20e1-4c50-89d7-3f896630018b",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "64ac4659-32ac-4eb6-a42e-d8476c4fb2db",
-                "go": "4c8edb74-efba-47cf-81d2-688c6a52439f",
+                "component_id": "ef2422f2-074b-439c-91ea-53c9777f4589",
+                "go": "f1c42a36-464b-4121-b2df-e9a8ff6a0539",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -7661,11 +7994,302 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "aa3e5646-6ffb-49a6-ab9c-450075a565b1",
+              "__guid": "fb50c8e0-f24d-4ba2-a8e7-e533d40b44f1",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 1.5,
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "88bf73ec-f22d-4af3-9ab4-105755697b61",
+      "Name": "MP5 Magazine (4)",
+      "Position": "36.14717,4.04193,38.73825",
+      "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
+      "Tags": "magazine",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Interactable",
+          "__guid": "5b4f7d4a-0eee-499e-b1f3-63571a333e75",
+          "MassScale": 1,
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "1692ab12-2aba-4311-a6ab-ef13c8f61bb4",
+            "go": "88bf73ec-f22d-4af3-9ab4-105755697b61",
+            "component_type": "Rigidbody"
+          }
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "1692ab12-2aba-4311-a6ab-ef13c8f61bb4",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 50,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "a059e78a-d9b5-4e0a-8e1b-fd22d83617ab",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "3,1,6",
+          "Static": false,
+          "Surface": "surfaces/metal.weapon.surface"
+        },
+        {
+          "__type": "WeaponMagazine",
+          "__guid": "d3ee69ac-037c-4807-b6e3-0b2f8bcbfddc",
+          "AmmoBodygroup": 0,
+          "BulletCapacity": 30,
+          "BulletCount": 0,
+          "Bullets": [],
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
+          "IsInfiniteAmmo": false,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "6637f234-5b7a-47b9-bf68-605b7668ca5e",
+            "go": "e72e6111-2e5a-4a69-9438-4b96ffe624d7",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Attachable",
+          "__guid": "998af0fa-587a-4c78-8a69-5945bff3734c",
+          "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "Interactable": {
+            "_type": "component",
+            "component_id": "5b4f7d4a-0eee-499e-b1f3-63571a333e75",
+            "go": "88bf73ec-f22d-4af3-9ab4-105755697b61",
+            "component_type": "Interactable"
+          },
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "1692ab12-2aba-4311-a6ab-ef13c8f61bb4",
+            "go": "88bf73ec-f22d-4af3-9ab4-105755697b61",
+            "component_type": "Rigidbody"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "e72e6111-2e5a-4a69-9438-4b96ffe624d7",
+          "Name": "Model",
+          "Position": "0.03938294,0.00000001408443,0.000000004694812",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "6637f234-5b7a-47b9-bf68-605b7668ca5e",
+              "BodyGroups": 18446744073709551614,
+              "CreateBoneObjects": false,
+              "Model": "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "e178a6ce-a80a-4c33-b4b2-ffa71c7ead5a",
+          "Name": "Magazine Grab Point",
+          "Position": "0.01413896,-0.05143735,-0.2274857",
+          "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
+          "Tags": "trigger",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "GrabPoint",
+              "__guid": "5c275df5-f627-4afa-9c7f-40ad64375cc0",
+              "Collider": {
+                "_type": "component",
+                "component_id": "04aa115c-0d32-4c87-a497-625d67a62c8b",
+                "go": "e178a6ce-a80a-4c33-b4b2-ffa71c7ead5a",
+                "component_type": "SphereCollider"
+              },
+              "GrabInput": "Grip",
+              "Interactable": {
+                "_type": "component",
+                "component_id": "5b4f7d4a-0eee-499e-b1f3-63571a333e75",
+                "go": "88bf73ec-f22d-4af3-9ab4-105755697b61",
+                "component_type": "Interactable"
+              },
+              "Preset": {
+                "Thumb": 1,
+                "Index": 1,
+                "Middle": 1,
+                "Ring": 1,
+                "Pinky": 1
+              },
+              "PresetDebugging": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "04aa115c-0d32-4c87-a497-625d67a62c8b",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 1.5,
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "1e992751-8854-46f9-a88c-8d94c478a69a",
+      "Name": "MP5 Magazine (5)",
+      "Position": "36.14717,1.983308,38.73825",
+      "Rotation": "0.4999998,0.5000001,0.4999999,0.5000001",
+      "Tags": "magazine",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Interactable",
+          "__guid": "1daa21ee-e799-4220-a608-edf9e3de18ab",
+          "MassScale": 1,
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "75ce8d01-06a6-401f-8638-888832210b7a",
+            "go": "1e992751-8854-46f9-a88c-8d94c478a69a",
+            "component_type": "Rigidbody"
+          }
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "75ce8d01-06a6-401f-8638-888832210b7a",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 50,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "0ffeadc7-cdef-4462-99c7-c1de28e3f94c",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "3,1,6",
+          "Static": false,
+          "Surface": "surfaces/metal.weapon.surface"
+        },
+        {
+          "__type": "WeaponMagazine",
+          "__guid": "39584845-aef3-4666-a53b-13c1ae4665e9",
+          "AmmoBodygroup": 0,
+          "BulletCapacity": 30,
+          "BulletCount": 0,
+          "Bullets": [],
+          "Caliber": "Nine",
+          "DefaultBulletCapacity": 30,
+          "IsInfiniteAmmo": false,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "f3483bd9-97dd-4588-a0e7-780564a20bfa",
+            "go": "7f9faf6d-4d58-4319-b965-95744492e0b6",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Attachable",
+          "__guid": "0d10a6a1-e0d0-416e-95c2-2c01ea8c3297",
+          "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "Interactable": {
+            "_type": "component",
+            "component_id": "1daa21ee-e799-4220-a608-edf9e3de18ab",
+            "go": "1e992751-8854-46f9-a88c-8d94c478a69a",
+            "component_type": "Interactable"
+          },
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "75ce8d01-06a6-401f-8638-888832210b7a",
+            "go": "1e992751-8854-46f9-a88c-8d94c478a69a",
+            "component_type": "Rigidbody"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "7f9faf6d-4d58-4319-b965-95744492e0b6",
+          "Name": "Model",
+          "Position": "0.03938294,0.00000001408443,0.000000004694812",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "f3483bd9-97dd-4588-a0e7-780564a20bfa",
+              "BodyGroups": 18446744073709551614,
+              "CreateBoneObjects": false,
+              "Model": "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "22be7028-12fd-473c-a094-9ca5f5426d7f",
+          "Name": "Magazine Grab Point",
+          "Position": "0.01413896,-0.05143735,-0.2274857",
+          "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
+          "Tags": "trigger",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "GrabPoint",
+              "__guid": "5f8a2bf2-2934-4ca6-b638-a151fd83ddac",
+              "Collider": {
+                "_type": "component",
+                "component_id": "390fb103-f8b6-4a5d-bad3-4970161e5873",
+                "go": "22be7028-12fd-473c-a094-9ca5f5426d7f",
+                "component_type": "SphereCollider"
+              },
+              "GrabInput": "Grip",
+              "Interactable": {
+                "_type": "component",
+                "component_id": "1daa21ee-e799-4220-a608-edf9e3de18ab",
+                "go": "1e992751-8854-46f9-a88c-8d94c478a69a",
+                "component_type": "Interactable"
+              },
+              "Preset": {
+                "Thumb": 1,
+                "Index": 1,
+                "Middle": 1,
+                "Ring": 1,
+                "Pinky": 1
+              },
+              "PresetDebugging": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "390fb103-f8b6-4a5d-bad3-4970161e5873",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -7678,7 +8302,7 @@
     {
       "__guid": "cae6bc6e-8191-4200-b616-8342fa66ed44",
       "Name": "M4 Magazine",
-      "Position": "15.49522,-19.62654,39.12962",
+      "Position": "15.31664,-19.62653,39.12962",
       "Rotation": "0.7071066,0.00000005960464,0.000000141561,0.7071069",
       "Tags": "magazine",
       "Enabled": true,
@@ -7722,8 +8346,10 @@
           "__guid": "234fab9e-498d-42bb-a213-bf8c945255b2",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "FiveFiveSix",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
@@ -7803,7 +8429,8 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
@@ -7818,9 +8445,9 @@
       ]
     },
     {
-      "__guid": "72c59cc2-f250-494d-bbeb-432c9f9f2af6",
+      "__guid": "5a6a02d0-d02b-42e4-80f7-31f85da07e31",
       "Name": "M4 Magazine (1)",
-      "Position": "11.68281,-19.62655,39.12963",
+      "Position": "12.24965,-19.62652,39.12962",
       "Rotation": "0.7071066,0.00000005960464,0.000000141561,0.7071069",
       "Tags": "magazine",
       "Enabled": true,
@@ -7829,18 +8456,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "9cc4b529-811d-4e8e-983a-822de04faf86",
+          "__guid": "b452a0be-f5bf-473d-b214-73c64692def7",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "b7b43c5e-a9b7-4f42-8719-f956861f051e",
-            "go": "72c59cc2-f250-494d-bbeb-432c9f9f2af6",
+            "component_id": "e8673168-0e63-484a-91cd-c6b78b7aeee3",
+            "go": "5a6a02d0-d02b-42e4-80f7-31f85da07e31",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "b7b43c5e-a9b7-4f42-8719-f956861f051e",
+          "__guid": "e8673168-0e63-484a-91cd-c6b78b7aeee3",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7852,7 +8479,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "2fa2918a-4f2b-4c07-bb82-cdcf5e40be2c",
+          "__guid": "32f6e6e9-916e-4f45-870b-75f2f51d401d",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -7861,41 +8488,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "6263a043-a682-45d5-a7bd-268510deb745",
+          "__guid": "fba8b587-c439-4c10-8111-84ea6beae71e",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "FiveFiveSix",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "ae50ac19-3360-4437-8436-2a5c859b9a88",
-            "go": "41cb79ee-6274-44f8-bc10-725aa328479e",
+            "component_id": "70aa2f0b-0fb8-4291-96f9-c96c69ece9c1",
+            "go": "6a0721fe-2ea0-45d2-a474-990c4a843e06",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "abfea98a-2692-4cf7-aed6-4d88a8c116c3",
+          "__guid": "931118a8-0d9f-4f0a-a3ed-5b068aea8ff6",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "9cc4b529-811d-4e8e-983a-822de04faf86",
-            "go": "72c59cc2-f250-494d-bbeb-432c9f9f2af6",
+            "component_id": "b452a0be-f5bf-473d-b214-73c64692def7",
+            "go": "5a6a02d0-d02b-42e4-80f7-31f85da07e31",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "b7b43c5e-a9b7-4f42-8719-f956861f051e",
-            "go": "72c59cc2-f250-494d-bbeb-432c9f9f2af6",
+            "component_id": "e8673168-0e63-484a-91cd-c6b78b7aeee3",
+            "go": "5a6a02d0-d02b-42e4-80f7-31f85da07e31",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "41cb79ee-6274-44f8-bc10-725aa328479e",
+          "__guid": "6a0721fe-2ea0-45d2-a474-990c4a843e06",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -7904,7 +8533,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "ae50ac19-3360-4437-8436-2a5c859b9a88",
+              "__guid": "70aa2f0b-0fb8-4291-96f9-c96c69ece9c1",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_assault_m4a1/v_m4a1_magazine.vmdl",
@@ -7914,7 +8543,7 @@
           ]
         },
         {
-          "__guid": "0186b376-9c38-49f5-bcb2-299857dba9c3",
+          "__guid": "986a7a9b-07b9-4658-831d-28d807dbda2d",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -7925,18 +8554,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "f45b41a2-7c29-4807-b452-2d52d7fc5c00",
+              "__guid": "9a2fd2e0-2c8c-4739-a618-158141f841c8",
               "Collider": {
                 "_type": "component",
-                "component_id": "c0a5b1f8-2bf9-4267-b3a7-21934cb11aca",
-                "go": "0186b376-9c38-49f5-bcb2-299857dba9c3",
+                "component_id": "0f96f724-1a87-4ed0-9e55-de48fba3c6e9",
+                "go": "986a7a9b-07b9-4658-831d-28d807dbda2d",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "9cc4b529-811d-4e8e-983a-822de04faf86",
-                "go": "72c59cc2-f250-494d-bbeb-432c9f9f2af6",
+                "component_id": "b452a0be-f5bf-473d-b214-73c64692def7",
+                "go": "5a6a02d0-d02b-42e4-80f7-31f85da07e31",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -7945,11 +8574,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "c0a5b1f8-2bf9-4267-b3a7-21934cb11aca",
+              "__guid": "0f96f724-1a87-4ed0-9e55-de48fba3c6e9",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -7960,9 +8590,9 @@
       ]
     },
     {
-      "__guid": "b59d52d3-18bf-4b55-9c45-8044f112b4d3",
+      "__guid": "2472e1e5-3530-4fca-b923-ea8d81453e82",
       "Name": "M4 Magazine (2)",
-      "Position": "8.320367,-19.62654,39.12963",
+      "Position": "8.724815,-19.62651,39.12962",
       "Rotation": "0.7071066,0.00000005960464,0.000000141561,0.7071069",
       "Tags": "magazine",
       "Enabled": true,
@@ -7971,18 +8601,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "78e5ecf9-55bb-40f3-b135-da751e637876",
+          "__guid": "752a1928-8a1b-471d-868a-d8fa48ae77c4",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "690c8748-ea80-4e5e-bcc4-425d9d5993e2",
-            "go": "b59d52d3-18bf-4b55-9c45-8044f112b4d3",
+            "component_id": "0891730f-0b58-4406-b920-b0088cc17114",
+            "go": "2472e1e5-3530-4fca-b923-ea8d81453e82",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "690c8748-ea80-4e5e-bcc4-425d9d5993e2",
+          "__guid": "0891730f-0b58-4406-b920-b0088cc17114",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -7994,7 +8624,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "1b91f375-9c69-4780-91b7-f4ed8b2c6bc0",
+          "__guid": "0ac9b161-725a-4dcb-beb7-3be4cc3d36a9",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -8003,41 +8633,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "de2a2fa3-8bfd-4e8c-bdc1-9bec4ff8445d",
+          "__guid": "cf80ae1c-2d2d-4c1f-a60f-c42d71dbcbae",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "FiveFiveSix",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "6b16dee0-6a4a-404f-b810-3fad9827282c",
-            "go": "5b924361-aa2a-40e1-9c1f-741079ca9be9",
+            "component_id": "680886d1-794f-4162-9cbf-366f737c9ee0",
+            "go": "676a0a64-dd4d-4fff-aa30-5517da04e990",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "7efc25a3-b5b3-4dec-bb24-1648132da041",
+          "__guid": "71a1061b-99b7-409f-b4dd-5768cfa6d568",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "78e5ecf9-55bb-40f3-b135-da751e637876",
-            "go": "b59d52d3-18bf-4b55-9c45-8044f112b4d3",
+            "component_id": "752a1928-8a1b-471d-868a-d8fa48ae77c4",
+            "go": "2472e1e5-3530-4fca-b923-ea8d81453e82",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "690c8748-ea80-4e5e-bcc4-425d9d5993e2",
-            "go": "b59d52d3-18bf-4b55-9c45-8044f112b4d3",
+            "component_id": "0891730f-0b58-4406-b920-b0088cc17114",
+            "go": "2472e1e5-3530-4fca-b923-ea8d81453e82",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "5b924361-aa2a-40e1-9c1f-741079ca9be9",
+          "__guid": "676a0a64-dd4d-4fff-aa30-5517da04e990",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -8046,7 +8678,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "6b16dee0-6a4a-404f-b810-3fad9827282c",
+              "__guid": "680886d1-794f-4162-9cbf-366f737c9ee0",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_assault_m4a1/v_m4a1_magazine.vmdl",
@@ -8056,7 +8688,7 @@
           ]
         },
         {
-          "__guid": "22e59280-4326-4834-87b2-e3509bd2d5b7",
+          "__guid": "14624718-9150-44d9-8b75-5f13546e7fd4",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -8067,18 +8699,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "7d005dc2-03d7-44d3-a2a1-11f7345474e8",
+              "__guid": "2ef0849b-ed6f-42aa-ab84-f10b4cbe0118",
               "Collider": {
                 "_type": "component",
-                "component_id": "2c1a72dd-91c9-4140-80f5-19c0a3efb526",
-                "go": "22e59280-4326-4834-87b2-e3509bd2d5b7",
+                "component_id": "302cfee9-c858-49ab-ba47-ce73187f53a1",
+                "go": "14624718-9150-44d9-8b75-5f13546e7fd4",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "78e5ecf9-55bb-40f3-b135-da751e637876",
-                "go": "b59d52d3-18bf-4b55-9c45-8044f112b4d3",
+                "component_id": "752a1928-8a1b-471d-868a-d8fa48ae77c4",
+                "go": "2472e1e5-3530-4fca-b923-ea8d81453e82",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -8087,11 +8719,12 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "2c1a72dd-91c9-4140-80f5-19c0a3efb526",
+              "__guid": "302cfee9-c858-49ab-ba47-ce73187f53a1",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -8102,9 +8735,9 @@
       ]
     },
     {
-      "__guid": "111294fc-4c9e-48d5-b005-9fde766368b1",
+      "__guid": "7b962c74-b197-4f0d-b0f5-ab8048bc8d6e",
       "Name": "M4 Magazine (3)",
-      "Position": "4.784105,-19.62653,39.12963",
+      "Position": "5.43196,-19.6265,39.12962",
       "Rotation": "0.7071066,0.00000005960464,0.000000141561,0.7071069",
       "Tags": "magazine",
       "Enabled": true,
@@ -8113,18 +8746,18 @@
       "Components": [
         {
           "__type": "Interactable",
-          "__guid": "0b10edaf-5e2c-4f52-867b-6630e6abb519",
+          "__guid": "9d35bfeb-38af-4c95-9580-bd3b083d6a44",
           "MassScale": 1,
           "Rigidbody": {
             "_type": "component",
-            "component_id": "1c457844-472b-4893-8979-5239a39f96ad",
-            "go": "111294fc-4c9e-48d5-b005-9fde766368b1",
+            "component_id": "4f24f6dd-8b4e-4627-8a60-8e51ffcd7f1e",
+            "go": "7b962c74-b197-4f0d-b0f5-ab8048bc8d6e",
             "component_type": "Rigidbody"
           }
         },
         {
           "__type": "Sandbox.Rigidbody",
-          "__guid": "1c457844-472b-4893-8979-5239a39f96ad",
+          "__guid": "4f24f6dd-8b4e-4627-8a60-8e51ffcd7f1e",
           "AngularDamping": 0,
           "Gravity": true,
           "LinearDamping": 0,
@@ -8136,7 +8769,7 @@
         },
         {
           "__type": "Sandbox.BoxCollider",
-          "__guid": "75aa681f-0432-4797-ae2c-b81cd734e6fa",
+          "__guid": "14c76c6f-3565-42c0-9512-5e9dc4f298e3",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "3,1,6",
@@ -8145,41 +8778,43 @@
         },
         {
           "__type": "WeaponMagazine",
-          "__guid": "284616af-619e-4b40-9076-9f641d5c852e",
+          "__guid": "5b6c79d9-b91c-4d28-ae6d-63beee591af9",
           "AmmoBodygroup": 0,
           "BulletCapacity": 30,
+          "BulletCount": 0,
           "Bullets": [],
-          "ChamberCount": 0,
+          "Caliber": "FiveFiveSix",
+          "DefaultBulletCapacity": 30,
           "IsInfiniteAmmo": false,
           "Renderer": {
             "_type": "component",
-            "component_id": "25b8b798-6b91-4a04-b4d6-d7c6bc5e8709",
-            "go": "0ff9248f-3645-4b2b-8755-57d07cd904fc",
+            "component_id": "a99ff34c-b6ab-4f58-8658-813a68b44ebb",
+            "go": "25e497fc-ef79-47cc-afee-dfdd0cf524b6",
             "component_type": "SkinnedModelRenderer"
           }
         },
         {
           "__type": "Attachable",
-          "__guid": "74c32927-57d2-4fa2-89c8-369581f86b47",
+          "__guid": "c132fde2-6078-4b44-8b6b-c2590a974147",
           "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
           "Interactable": {
             "_type": "component",
-            "component_id": "0b10edaf-5e2c-4f52-867b-6630e6abb519",
-            "go": "111294fc-4c9e-48d5-b005-9fde766368b1",
+            "component_id": "9d35bfeb-38af-4c95-9580-bd3b083d6a44",
+            "go": "7b962c74-b197-4f0d-b0f5-ab8048bc8d6e",
             "component_type": "Interactable"
           },
           "Rigidbody": {
             "_type": "component",
-            "component_id": "1c457844-472b-4893-8979-5239a39f96ad",
-            "go": "111294fc-4c9e-48d5-b005-9fde766368b1",
+            "component_id": "4f24f6dd-8b4e-4627-8a60-8e51ffcd7f1e",
+            "go": "7b962c74-b197-4f0d-b0f5-ab8048bc8d6e",
             "component_type": "Rigidbody"
           }
         }
       ],
       "Children": [
         {
-          "__guid": "0ff9248f-3645-4b2b-8755-57d07cd904fc",
+          "__guid": "25e497fc-ef79-47cc-afee-dfdd0cf524b6",
           "Name": "Model",
           "Position": "0.03938294,0.00000001408443,0.000000004694812",
           "Enabled": true,
@@ -8188,7 +8823,7 @@
           "Components": [
             {
               "__type": "Sandbox.SkinnedModelRenderer",
-              "__guid": "25b8b798-6b91-4a04-b4d6-d7c6bc5e8709",
+              "__guid": "a99ff34c-b6ab-4f58-8658-813a68b44ebb",
               "BodyGroups": 2,
               "CreateBoneObjects": false,
               "Model": "models/weapons/sbox_assault_m4a1/v_m4a1_magazine.vmdl",
@@ -8198,7 +8833,7 @@
           ]
         },
         {
-          "__guid": "ae116024-381c-46b2-8e7e-4107d1dd2c88",
+          "__guid": "cb03d319-7a03-4ffe-aea3-88268ee2d07e",
           "Name": "Magazine Grab Point",
           "Position": "0.01413896,-0.05143735,-0.2274857",
           "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
@@ -8209,18 +8844,18 @@
           "Components": [
             {
               "__type": "GrabPoint",
-              "__guid": "2795d3b1-6383-45c9-aa22-5e6fe543bc6a",
+              "__guid": "1b88f750-3ab9-406e-ac6a-ffa9fe1606db",
               "Collider": {
                 "_type": "component",
-                "component_id": "dc5272ed-7082-4d19-89e3-c97f1b7d2419",
-                "go": "ae116024-381c-46b2-8e7e-4107d1dd2c88",
+                "component_id": "437c540b-5c2a-4539-8f93-aae677f3fa45",
+                "go": "cb03d319-7a03-4ffe-aea3-88268ee2d07e",
                 "component_type": "SphereCollider"
               },
               "GrabInput": "Grip",
               "Interactable": {
                 "_type": "component",
-                "component_id": "0b10edaf-5e2c-4f52-867b-6630e6abb519",
-                "go": "111294fc-4c9e-48d5-b005-9fde766368b1",
+                "component_id": "9d35bfeb-38af-4c95-9580-bd3b083d6a44",
+                "go": "7b962c74-b197-4f0d-b0f5-ab8048bc8d6e",
                 "component_type": "Interactable"
               },
               "Preset": {
@@ -8229,11 +8864,157 @@
                 "Middle": 1,
                 "Ring": 1,
                 "Pinky": 1
-              }
+              },
+              "PresetDebugging": false
             },
             {
               "__type": "Sandbox.SphereCollider",
-              "__guid": "dc5272ed-7082-4d19-89e3-c97f1b7d2419",
+              "__guid": "437c540b-5c2a-4539-8f93-aae677f3fa45",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Radius": 1.5,
+              "Static": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "254d8d31-52e6-45b5-b9f1-02ea26e30553",
+      "Name": "M4 Magazine (4)",
+      "Position": "1.688514,-19.6265,39.12962",
+      "Rotation": "0.7071066,0.00000005960464,0.000000141561,0.7071069",
+      "Tags": "magazine",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Interactable",
+          "__guid": "d31216e7-c943-41ab-9969-2571e1c5f83a",
+          "MassScale": 1,
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "a4611d95-2457-454a-b7ff-c2b7a9884b77",
+            "go": "254d8d31-52e6-45b5-b9f1-02ea26e30553",
+            "component_type": "Rigidbody"
+          }
+        },
+        {
+          "__type": "Sandbox.Rigidbody",
+          "__guid": "a4611d95-2457-454a-b7ff-c2b7a9884b77",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 50,
+          "MotionEnabled": true,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "6efc0b53-3528-4033-9ccf-33577b29ca4e",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "3,1,6",
+          "Static": false,
+          "Surface": "surfaces/metal.weapon.surface"
+        },
+        {
+          "__type": "WeaponMagazine",
+          "__guid": "339db176-1646-4410-85ce-00fc8735554a",
+          "AmmoBodygroup": 0,
+          "BulletCapacity": 30,
+          "BulletCount": 0,
+          "Bullets": [],
+          "Caliber": "FiveFiveSix",
+          "DefaultBulletCapacity": 30,
+          "IsInfiniteAmmo": false,
+          "Renderer": {
+            "_type": "component",
+            "component_id": "74904c05-c181-4530-a244-2079a0b063ab",
+            "go": "0d310689-f257-4a34-a66d-4ea6c2cb94f6",
+            "component_type": "SkinnedModelRenderer"
+          }
+        },
+        {
+          "__type": "Attachable",
+          "__guid": "29b314a9-efaf-400f-b6e2-f97d44fa0226",
+          "AttachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "DetachSound": "sounds/weapons/m4a1/m4_magazine_in.sound",
+          "Interactable": {
+            "_type": "component",
+            "component_id": "d31216e7-c943-41ab-9969-2571e1c5f83a",
+            "go": "254d8d31-52e6-45b5-b9f1-02ea26e30553",
+            "component_type": "Interactable"
+          },
+          "Rigidbody": {
+            "_type": "component",
+            "component_id": "a4611d95-2457-454a-b7ff-c2b7a9884b77",
+            "go": "254d8d31-52e6-45b5-b9f1-02ea26e30553",
+            "component_type": "Rigidbody"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "0d310689-f257-4a34-a66d-4ea6c2cb94f6",
+          "Name": "Model",
+          "Position": "0.03938294,0.00000001408443,0.000000004694812",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.SkinnedModelRenderer",
+              "__guid": "74904c05-c181-4530-a244-2079a0b063ab",
+              "BodyGroups": 2,
+              "CreateBoneObjects": false,
+              "Model": "models/weapons/sbox_assault_m4a1/v_m4a1_magazine.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "__guid": "4c8bc4a7-ced9-4ad4-98f3-78eb8422ba07",
+          "Name": "Magazine Grab Point",
+          "Position": "0.01413896,-0.05143735,-0.2274857",
+          "Rotation": "0.00000006705523,-0.6087677,-0.00000002980232,0.7933571",
+          "Tags": "trigger",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "GrabPoint",
+              "__guid": "af29133b-7f62-4742-94b4-b453607d0980",
+              "Collider": {
+                "_type": "component",
+                "component_id": "d489efaa-391a-4512-99b3-5d8a6ffcf75f",
+                "go": "4c8bc4a7-ced9-4ad4-98f3-78eb8422ba07",
+                "component_type": "SphereCollider"
+              },
+              "GrabInput": "Grip",
+              "Interactable": {
+                "_type": "component",
+                "component_id": "d31216e7-c943-41ab-9969-2571e1c5f83a",
+                "go": "254d8d31-52e6-45b5-b9f1-02ea26e30553",
+                "component_type": "Interactable"
+              },
+              "Preset": {
+                "Thumb": 1,
+                "Index": 1,
+                "Middle": 1,
+                "Ring": 1,
+                "Pinky": 1
+              },
+              "PresetDebugging": false
+            },
+            {
+              "__type": "Sandbox.SphereCollider",
+              "__guid": "d489efaa-391a-4512-99b3-5d8a6ffcf75f",
               "Center": "0,0,0",
               "IsTrigger": true,
               "Radius": 1.5,
@@ -8335,7 +9116,7 @@
   },
   "Title": "testbed",
   "Description": "",
-  "LastSaved": "2024-05-05T13:07:45.5660177\u002B02:00",
+  "LastSaved": "2024-05-05T15:19:00.5459526\u002B02:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
