@@ -47,7 +47,7 @@ public partial class LaserPointerComponent : Component, Component.ExecuteInEdito
 
 	private Vector3 GetTraceEnd()
 	{
-		var tr = Scene.Trace.Ray( Transform.Position, Transform.Position + ( Transform.Rotation.Forward * Dist ) ).Run();
+		var tr = Scene.Trace.Ray( Transform.Position, Transform.Position + (Transform.Rotation.Forward * Dist) ).Run();
 		return tr.EndPosition;
 	}
 
@@ -82,12 +82,15 @@ public partial class LaserPointerComponent : Component, Component.ExecuteInEdito
 	{
 		SetEnabled( IsEnabled );
 
-		GrabPoint.OnGrabStartEvent += OnGrabStart;
-		GrabPoint.OnGrabEndEvent += OnGrabEnd;
+		if ( GrabPoint.IsValid() )
+		{
+			GrabPoint.OnGrabStartEvent += OnGrabStart;
+			GrabPoint.OnGrabEndEvent += OnGrabEnd;
+		}
 	}
 
 	void OnGrabStart()
-	{ 
+	{
 		//
 	}
 

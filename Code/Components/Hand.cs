@@ -110,7 +110,8 @@ public partial class Hand : Component, Component.ITriggerListener
 
 		var tx = controller.Transform;
 		// Bit of a hack, but the alyx controllers have a weird origin that I don't care for.
-		tx = tx.Add( Vector3.Forward * -2f, false );
+		tx = tx.Add( Vector3.Forward * -4f, false );
+		tx = tx.WithRotation( tx.Rotation.RotateAroundAxis( Vector3.Right, -30f ) );
 
 		var prevPosition = Transform.World.Position;
 
@@ -154,7 +155,7 @@ public partial class Hand : Component, Component.ITriggerListener
 	{
 		return CurrentGrabPoint.IsValid();
 	}
-	
+
 	/// <summary>
 	/// Attaches the hand model to a grab point.
 	/// </summary>

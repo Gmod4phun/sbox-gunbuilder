@@ -115,7 +115,7 @@ public partial class Weapon : Interactable
 
 		if ( ejectedBullets is not null )
 		{
-		// 	OnBulletEjected( ejectedBullets );
+			// 	OnBulletEjected( ejectedBullets );
 		}
 
 		var magazine = Magazine;
@@ -223,7 +223,7 @@ public partial class Weapon : Interactable
 	{
 		if ( Chamber?.Eject() is { } bullets )
 		{
-			return bullets.First();
+			return bullets.FirstOrDefault();
 		}
 		return null;
 	}

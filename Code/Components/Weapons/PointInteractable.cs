@@ -8,7 +8,7 @@ public partial class PointInteractable : BaseInteractable
 	/// <summary>
 	/// When the completion value changes.
 	/// </summary>
-	[Property, Group( "Events")] public Action<float, float> OnCompletionValue { get; set; }
+	[Property, Group( "Events" )] public Action<float, float> OnCompletionValue { get; set; }
 
 	/// <summary>
 	/// The model renderer for this interactable.
@@ -66,7 +66,8 @@ public partial class PointInteractable : BaseInteractable
 	/// <summary>
 	/// The completion value of this interaction. 1 being fully fully done, 0 being default state
 	/// </summary>
-	[Property, JsonIgnore, Range( 0, 1 ), Group( "Debugging" )] public float CompletionValue
+	[Property, JsonIgnore, Range( 0, 1 ), Group( "Debugging" )]
+	public float CompletionValue
 	{
 		get => completionValue;
 		set
@@ -152,10 +153,13 @@ public partial class PointInteractable : BaseInteractable
 		// but it's useful for debugging without VR.
 		if ( !Hand.IsValid() )
 		{
-			BoneGameObject.Transform.Local = new Transform( CalcLocalPosition(), Rotation.Identity, 1 );
-			if ( CompletionValue.AlmostEqual( 1f ) )
+			if ( BoneGameObject.IsValid() )
 			{
-				BoneGameObject.Transform.LocalRotation = AnglesAtOne.ToRotation();
+				BoneGameObject.Transform.Local = new Transform( CalcLocalPosition(), Rotation.Identity, 1 );
+				if ( CompletionValue.AlmostEqual( 1f ) )
+				{
+					BoneGameObject.Transform.LocalRotation = AnglesAtOne.ToRotation();
+				}
 			}
 			return;
 		}
@@ -164,7 +168,7 @@ public partial class PointInteractable : BaseInteractable
 		var localHand = Start.Transform.World.ToLocal( Hand.Transform.World );
 		var handDiffFromStart = localHand.Position.x;
 		var clamped = handDiffFromStart.Remap( 0, -DistanceBetweenStartAndEnd, 0, 1, true );
-		
+
 		// Make sure our completion value is up to date.
 		CompletionValue = clamped;
 

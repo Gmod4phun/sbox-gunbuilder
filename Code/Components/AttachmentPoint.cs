@@ -99,6 +99,12 @@ public partial class AttachmentPoint : Component, Component.ExecuteInEditor, Com
 			CurrentAttachable.Transform.Position = GameObject.Transform.Position;
 			CurrentAttachable.Transform.Rotation = GameObject.Transform.Rotation;
 		}
+
+		// if ( GuideModel is not null )
+		// {
+		// 	Gizmo.Draw.Color = Color.Orange.WithAlpha( 0.4f );
+		// 	Gizmo.Draw.Model( GuideModel, Transform.World );
+		// }
 	}
 
 	/// <summary>

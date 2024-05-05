@@ -104,6 +104,14 @@ public partial class GrabPoint : Component
 		Gizmo.Draw.Model( "models/hands/alyx_hand_right.vmdl" );
 	}
 
+	protected override void OnUpdate()
+	{
+		base.OnUpdate();
+
+		// Gizmo.Draw.Color = Color.Cyan.WithAlpha( 0.2f );
+		// Gizmo.Draw.Model( "models/hands/alyx_hand_right.vmdl", Transform.World );
+	}
+
 	/// <summary>
 	/// Called normally by the hand, will update the pose of a hand to match the data we give it.
 	/// </summary>
