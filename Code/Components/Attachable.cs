@@ -75,6 +75,11 @@ public sealed class Attachable : Component
 	{
 		Tags.Set( "attached", false );
 
+		// Transform.Position = attachmentPoint.Transform.Position;
+		// Transform.Rotation = attachmentPoint.Transform.Rotation;
+
+		Rigidbody.MotionEnabled = true;
+
 		if ( DetachSound is not null )
 			Sound.Play( DetachSound, Transform.Position );
 

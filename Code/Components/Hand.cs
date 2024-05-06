@@ -108,6 +108,14 @@ public partial class Hand : Component, Component.ITriggerListener
 		var controller = GetController();
 		if ( controller is null ) return;
 
+		// render a model of the controller
+		var mdl = controller.GetModel();
+		if ( mdl != null )
+		{
+			Gizmo.Draw.Color = Color.Green.WithAlpha( 0.5f );
+			Gizmo.Draw.Model( mdl, controller.Transform );
+		}
+
 		var tx = controller.Transform;
 		// Bit of a hack, but the alyx controllers have a weird origin that I don't care for.
 		tx = tx.Add( Vector3.Forward * -4f, false );

@@ -37,7 +37,7 @@ public partial class Hand
 		HoldItem,
 		Clamp
 	}
-	
+
 	private static List<string> AnimGraphNames = new()
 	{
 		"FingerCurl_Thumb",

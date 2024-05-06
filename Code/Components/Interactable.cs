@@ -88,7 +88,10 @@ public partial class Interactable : BaseInteractable
 		// If we're not holding this interactable anymore, turn its motion back on.
 		if ( heldGrabPoints.Count <= 0 )
 		{
-			Rigidbody.MotionEnabled = true;
+			if ( !Tags.Has( "attached" ) )
+			{
+				Rigidbody.MotionEnabled = true;
+			}
 		}
 	}
 
@@ -139,7 +142,7 @@ public partial class Interactable : BaseInteractable
 		var holdPos = PrimaryGrabPoint.HeldHand.GetHoldPosition( PrimaryGrabPoint );
 		var grabPointPos = PrimaryGrabPoint.Transform.Position;
 
-		Vector3.SmoothDamp( Rigidbody.Transform.Position, holdPos + ( holdPos - grabPointPos ), ref velocity, CalcVelocityWeight(), Time.Delta );
+		Vector3.SmoothDamp( Rigidbody.Transform.Position, holdPos + (holdPos - grabPointPos), ref velocity, CalcVelocityWeight(), Time.Delta );
 		Rigidbody.Velocity = velocity;
 
 		var angularVelocity = Rigidbody.AngularVelocity;
