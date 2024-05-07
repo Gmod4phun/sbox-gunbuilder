@@ -7,8 +7,9 @@ public partial class PlayerMovement : Component
 
 	protected override void OnUpdate()
 	{
-		var controller = Hand.GetController();
-		var inputDir = controller != null ? controller.Joystick.Value : Vector2.Zero;
+		if ( Hand.GetController() is null ) return;
+
+		var inputDir = Hand.GetController().Joystick.Value;
 		var headRot = Head.Transform.Rotation;
 		var fwd = new Vector3( inputDir.y, -inputDir.x, 0 ) * headRot;
 

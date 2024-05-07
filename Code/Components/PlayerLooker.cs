@@ -9,8 +9,9 @@ public partial class PlayerLooker : Component
 
 	protected override void OnUpdate()
 	{
-		var controller = Hand.GetController();
-		var inputDir = controller != null ? controller.Joystick.Value : Vector2.Zero;
+		if ( Hand.GetController() is null ) return;
+
+		var inputDir = Hand.GetController().Joystick.Value;
 		if ( !inputDir.x.AlmostEqual( 0f ) )
 		{
 			Snap( inputDir.x > 0f ? true : false );
