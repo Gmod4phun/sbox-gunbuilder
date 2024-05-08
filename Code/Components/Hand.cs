@@ -66,6 +66,7 @@ public partial class Hand : Component, Component.ITriggerListener
 	{
 		return inputType switch
 		{
+			GrabPoint.GrabInputType.Hover => true,
 			GrabPoint.GrabInputType.Grip => IsGripDown(),
 			GrabPoint.GrabInputType.Trigger => IsTriggerDown(),
 			_ => false
@@ -99,6 +100,7 @@ public partial class Hand : Component, Component.ITriggerListener
 		// If we can release the object (which can fail!), clear the current grab point.
 		if ( CurrentGrabPoint?.Interactable?.StopInteract( CurrentGrabPoint ) ?? false )
 		{
+			HoveredGrabPoints.Remove( CurrentGrabPoint );
 			CurrentGrabPoint = null;
 		}
 	}
@@ -120,6 +122,8 @@ public partial class Hand : Component, Component.ITriggerListener
 		// Bit of a hack, but the alyx controllers have a weird origin that I don't care for.
 		tx = tx.Add( Vector3.Forward * -4f, false );
 		tx = tx.WithRotation( tx.Rotation.RotateAroundAxis( Vector3.Right, -30f ) );
+
+		tx = tx.WithRotation( tx.Rotation * Rotation.From( 20, -5, 0 ) );
 
 		var prevPosition = Transform.World.Position;
 
@@ -143,9 +147,21 @@ public partial class Hand : Component, Component.ITriggerListener
 
 		if ( IsProxy ) return;
 
-		if ( IsGripDown() || IsTriggerDown() )
+		// Auto-detach for hover input type
+		if ( CurrentGrabPoint.IsValid() && CurrentGrabPoint.GrabInput == GrabPoint.GrabInputType.Hover )
 		{
-			var point = GetPrioritizedGrabPoint();
+			// Detach!
+			if ( CurrentGrabPoint.Transform.Position.Distance( Transform.Position ) > 3f )
+			{
+				StopGrabbing();
+				return;
+			}
+		}
+
+		var point = GetPrioritizedGrabPoint();
+
+		if ( point.IsValid() && IsDown( point.GrabInput ) )
+		{
 			if ( !point.IsValid() ) return;
 			StartGrabbing( point );
 		}
@@ -214,7 +230,7 @@ public partial class Hand : Component, Component.ITriggerListener
 		{
 			if ( HoveredGrabPoints.Contains( grabPoint ) )
 			{
-				HoveredGrabPoints.Remove( grabPoint );
+			//	HoveredGrabPoints.Remove( grabPoint );
 			}
 		}
 	}
