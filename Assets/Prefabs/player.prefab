@@ -59,7 +59,7 @@
         "__guid": "5fa1791b-64b9-4e26-88bf-dfa971ee5ed3",
         "Flags": 0,
         "Name": "Head",
-        "Position": "0,0,20",
+        "Position": "0,0,44",
         "Enabled": true,
         "NetworkMode": 2,
         "NetworkInterpolation": true,
@@ -130,7 +130,7 @@
         "__guid": "ead88264-4425-42c5-89e0-3f798e1aeea4",
         "Flags": 0,
         "Name": "Left Hand",
-        "Position": "0,12.28422,10.1414",
+        "Position": "0,12.28422,32",
         "Tags": "hands",
         "Enabled": true,
         "NetworkMode": 2,
@@ -610,7 +610,7 @@
         "__guid": "f8232abf-d4c7-45ff-8ba9-ae003b9d066f",
         "Flags": 0,
         "Name": "Right Hand",
-        "Position": "0,-16.74989,10.1414",
+        "Position": "0,-16.74989,32",
         "Tags": "hands",
         "Enabled": true,
         "NetworkMode": 2,
@@ -1083,6 +1083,46 @@
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "__guid": "f88ffbb4-7f11-4895-9021-71068ff83577",
+        "Flags": 0,
+        "Name": "Weapon Pouch",
+        "Position": "12,0,22.04767",
+        "Scale": "0.5,0.5,0.5",
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "440165aa-9021-47d5-a780-a406ccddb66d",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/pouch.vmat",
+            "Model": "models/pouch.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "PlayerPouch",
+            "__guid": "ef1c2465-b54c-47be-866d-02358da9df0c",
+            "CanUseDuplicateMode": false,
+            "Player": {
+              "_type": "component",
+              "component_id": "03f36b68-bbfc-4df2-a42f-a83d1cad0e89",
+              "go": "bf22575b-c622-48df-b17d-a94bf3fb0a55",
+              "component_type": "Player"
+            },
+            "PouchRadius": 8
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "753ca68f-4176-4c2a-90db-41741cec4c8b",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Radius": 10,
+            "Static": false
           }
         ]
       }

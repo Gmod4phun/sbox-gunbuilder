@@ -4,12 +4,12 @@ public interface IGrabbable : IValid
 	/// This grabbable has stopped being grabbed by a hand.
 	/// </summary>
 	/// <param name="hand"></param>
-	public void StopGrabbing( Hand hand );
+	public bool StopGrabbing( Hand hand );
 
 	/// <summary>
 	/// This grabbable thas started being grabbed by a hand.
 	/// </summary>
-	public void StartGrabbing( Hand hand );
+	public bool StartGrabbing( Hand hand );
 
 	/// <summary>
 	/// Can we start grabbing?
@@ -62,7 +62,13 @@ public interface IGrabbable : IValid
 	/// <summary>
 	/// The input type.
 	/// </summary>
-	public GrabInputType GrabInput { get; set; }
+	public GrabInputType GrabInput { get; }
+
+	public interface IGrabListener
+	{
+		void OnGrabStart( BaseInteractable interactable, Hand hand ) { }
+		void OnGrabEnd( BaseInteractable interactable, Hand hand ) { }
+	}
 }
 
 /// <summary>

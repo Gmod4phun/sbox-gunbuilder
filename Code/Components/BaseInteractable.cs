@@ -17,7 +17,7 @@ public partial class BaseInteractable : Component
 
 	protected HashSet<IGrabbable> heldGrabbables = new();
 
-	public virtual IEnumerable<IGrabbable> AllGrabPoints => Components.GetAll<GrabPoint>( FindMode.EnabledInSelfAndDescendants );
+	public virtual IEnumerable<IGrabbable> GrabbableDirectory => Components.GetAll<GrabPoint>( FindMode.EnabledInSelfAndDescendants );
 
 	/// <summary>
 	/// Gets you a hash set of the held grab points
@@ -32,7 +32,7 @@ public partial class BaseInteractable : Component
 	/// <summary>
 	/// A shorthand property to get the primary grab point for this interactable.
 	/// </summary>
-	public virtual IGrabbable PrimaryGrabPoint => AllGrabPoints.FirstOrDefault( x => !x.Tags.Has( "secondary" ) );
+	public virtual IGrabbable PrimaryGrabPoint => GrabbableDirectory.FirstOrDefault( x => !x.Tags.Has( "secondary" ) );
 
 	/// <summary>
 	/// An artificial delay between how long we can start a new/stop a current interaction
@@ -41,7 +41,7 @@ public partial class BaseInteractable : Component
 
 	public void SetGrabPointsEnabled( bool enabled )
 	{
-		foreach ( var grabPoint in AllGrabPoints )
+		foreach ( var grabPoint in GrabbableDirectory )
 		{
 			grabPoint.GameObject.Enabled = enabled;
 		}
@@ -79,13 +79,18 @@ public partial class BaseInteractable : Component
 	/// </summary>
 	/// <param name="grabbable"></param>
 	/// <param name="hand"></param>
-	public bool Interact( IGrabbable grabbable, Hand hand )
+	public bool Interact( Hand hand, IGrabbable grabbable = null )
 	{
+		// Pick the first grab point if we didn't specify one.
+		grabbable ??= GrabbableDirectory.FirstOrDefault();
+
 		if ( !CanInteract( grabbable, hand ) ) return false;
 
-		grabbable.StartGrabbing( hand );
-
-		hand?.AttachModelToGrabPoint( grabbable.GameObject );
+		if ( hand.IsValid() )
+		{
+			hand.AttachModelTo( grabbable.GameObject );
+			hand.CurrentGrabbable = grabbable;
+		}
 
 		heldGrabbables.Add( grabbable );
 
@@ -106,12 +111,13 @@ public partial class BaseInteractable : Component
 
 		Log.Info( $"> Stop interacting with {grabbable}" );
 
-		grabbable.StopGrabbing( hand );
-
-		hand?.DetachModelFromGrabPoint();
+		if ( hand.IsValid() )
+		{
+			hand.DetachModelFrom();
+			hand.CurrentGrabbable = null;
+		}
 
 		heldGrabbables.Remove( grabbable );
-
 		OnStopInteract( grabbable, hand );
 
 		return true;

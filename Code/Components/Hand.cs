@@ -11,12 +11,12 @@ public partial class Hand : Component, Component.ITriggerListener
 	/// Which objects are we hovering our hand over right now?
 	/// This doesn't mean HOLDING, it means hovered.
 	/// </summary>
-	HashSet<IGrabbable> HoveredGrabPoints = new();
+	HashSet<IGrabbable> HoveredDirectory = new();
 
 	/// <summary>
 	/// The current grab point that this hand is holding. This means the grip is down, and we're actively holding an interactable.
 	/// </summary>
-	IGrabbable CurrentGrabPoint { get; set; }
+	public IGrabbable CurrentGrabbable { get; set; }
 
 	/// <summary>
 	/// The input deadzone, so holding ( flDeadzone * 100 ) percent of the grip down means we've got the grip / trigger down.
@@ -77,19 +77,21 @@ public partial class Hand : Component, Component.ITriggerListener
 	/// <summary>
 	/// Try to grab a grab point.
 	/// </summary>
-	/// <param name="grabPoint"></param>
-	void StartGrabbing( GrabPoint grabPoint )
+	/// <param name="grabbable"></param>
+	void StartGrabbing( IGrabbable grabbable )
 	{
 		// If we're already grabbing this thing, don't bother.
-		if ( CurrentGrabPoint == grabPoint ) return;
+		if ( CurrentGrabbable == grabbable ) return;
 
 		// Input type match
-		if ( !IsDown( grabPoint.GrabInput ) ) return;
+		if ( !IsDown( grabbable.GrabInput ) ) return;
 
 		// Only if we succeed to interact with the interactable, take hold of the object.
-		if ( grabPoint.Interactable.Interact( grabPoint, this ) )
+		if ( grabbable.StartGrabbing( this ) )
 		{
-			CurrentGrabPoint = grabPoint;
+			Log.Info( "Start grabbarino" );
+			// We did it! Respond?
+			CurrentGrabbable = grabbable;
 		}
 	}
 
@@ -99,10 +101,10 @@ public partial class Hand : Component, Component.ITriggerListener
 	public void StopGrabbing()
 	{
 		// If we can release the object (which can fail!), clear the current grab point.
-		if ( CurrentGrabPoint?.Interactable?.StopInteract( CurrentGrabPoint ) ?? false )
+		if ( CurrentGrabbable?.StopGrabbing( this ) ?? false )
 		{
-			HoveredGrabPoints.Remove( CurrentGrabPoint );
-			CurrentGrabPoint = null;
+			HoveredDirectory.Remove( CurrentGrabbable );
+			CurrentGrabbable = null;
 		}
 	}
 
@@ -114,24 +116,23 @@ public partial class Hand : Component, Component.ITriggerListener
 		var tx = controller.Transform;
 		// Bit of a hack, but the alyx controllers have a weird origin that I don't care for.
 		tx = tx.Add( Vector3.Forward * -2f, false );
-
 		tx = tx.WithRotation( tx.Rotation * Rotation.From( 20, -5, 0 ) );
 
 		var prevPosition = Transform.World.Position;
-
 		Transform.World = tx;
 
 		var newPosition = Transform.World.Position;
-
-		Velocity = (newPosition - prevPosition);
+		Velocity = newPosition - prevPosition;
 	}
 
-	protected IGrabbable GetPrioritizedGrabPoint()
+	protected IGrabbable TryFindGrabbable()
 	{
-		if ( CurrentGrabPoint.IsValid() ) return CurrentGrabPoint;
+		// Are we already holding one?
+		if ( CurrentGrabbable.IsValid() ) return CurrentGrabbable;
 
-		var points = HoveredGrabPoints.OrderBy( x => x.GameObject.Transform.Position.Distance( Transform.Position ) );
-		return points.FirstOrDefault();
+		return HoveredDirectory
+			.OrderBy( x => x.GameObject.Transform.Position.Distance( Transform.Position ) )
+			.FirstOrDefault();
 	}
 
 	protected override void OnUpdate()
@@ -141,13 +142,13 @@ public partial class Hand : Component, Component.ITriggerListener
 
 		if ( IsProxy ) return;
 
-		if ( CurrentGrabPoint.IsValid() )
+		if ( CurrentGrabbable.IsValid() )
 		{
 			// Auto-detach for hover input type
-			if ( CurrentGrabPoint is GrabPoint grabPoint && grabPoint.GrabInput == GrabInputType.Hover )
+			if ( CurrentGrabbable.GrabInput == GrabInputType.Hover )
 			{
 				// Detach!
-				if ( grabPoint.Transform.Position.Distance( Transform.Position ) > 3f )
+				if ( CurrentGrabbable.GameObject.Transform.Position.Distance( Transform.Position ) > 3f )
 				{
 					StopGrabbing();
 					return;
@@ -155,10 +156,10 @@ public partial class Hand : Component, Component.ITriggerListener
 			}
 		}
 
-		var grabbable = GetPrioritizedGrabPoint();
-		if ( grabbable.IsValid() && grabbable is GrabPoint point && IsDown( point.GrabInput ) )
+		var grabbable = TryFindGrabbable();
+		if ( grabbable.IsValid() && IsDown( grabbable.GrabInput ) )
 		{
-			StartGrabbing( point );
+			StartGrabbing( grabbable );
 		}
 		else
 		{
@@ -191,11 +192,10 @@ public partial class Hand : Component, Component.ITriggerListener
 			{
 				Gizmo.Draw.Color = Color.Green;
 
-				var grabPoint = interactable.AllGrabPoints.FirstOrDefault();
-
-				if ( IsDown( grabPoint.GrabInput ) && interactable.Interact( grabPoint, this ) )
+				var grabbable = interactable.GrabbableDirectory.FirstOrDefault();
+				if ( IsDown( grabbable.GrabInput ) && interactable.Interact( this, grabbable ) )
 				{
-					CurrentGrabPoint = grabPoint;
+					// We did it! Respond?
 				}
 			}
 		}
@@ -209,14 +209,14 @@ public partial class Hand : Component, Component.ITriggerListener
 	/// <returns></returns>
 	internal bool IsHolding()
 	{
-		return CurrentGrabPoint.IsValid();
+		return CurrentGrabbable.IsValid();
 	}
 	
 	/// <summary>
 	/// Attaches the hand model to a grab point.
 	/// </summary>
 	/// <param name="gameObject"></param>
-	internal void AttachModelToGrabPoint( GameObject gameObject )
+	internal void AttachModelTo( GameObject gameObject )
 	{
 		DummyGameObject.SetParent( gameObject, false );
 	}
@@ -224,20 +224,20 @@ public partial class Hand : Component, Component.ITriggerListener
 	/// <summary>
 	/// Detaches the hand model from the grab point, puts it back on our hand.
 	/// </summary>
-	internal void DetachModelFromGrabPoint()
+	internal void DetachModelFrom()
 	{
 		DummyGameObject.SetParent( ModelGameObject, false );
 	}
 
 	// Not sure what purpose this'll really serve soon.
-	internal Vector3 GetHoldPosition( IGrabbable grabPoint )
+	internal Vector3 GetHoldPosition( IGrabbable grabbable )
 	{
 		var src = ModelGameObject.Transform.Position;
 		return src;
 	}
 
 	// Not sure what purpose this'll really serve soon.
-	internal Rotation GetHoldRotation( IGrabbable grabPoint )
+	internal Rotation GetHoldRotation( IGrabbable grabbable )
 	{
 		return ModelGameObject.Transform.Rotation;
 	}
@@ -249,20 +249,20 @@ public partial class Hand : Component, Component.ITriggerListener
 	void ITriggerListener.OnTriggerEnter( Collider other )
 	{
 		// Did we find a grab point that'll become eligible to grab?
-		if ( other.Components.Get<GrabPoint>( FindMode.EnabledInSelf ) is { } grabPoint )
+		if ( other.Components.Get<IGrabbable>( FindMode.EnabledInSelf ) is { } grabbable )
 		{
-			HoveredGrabPoints.Add( grabPoint );
+			HoveredDirectory.Add( grabbable );
 		}
 	}
 
 	void ITriggerListener.OnTriggerExit( Collider other )
 	{
 		// Did we find a grab point that'll become eligible to grab?
-		if ( other.Components.Get<GrabPoint>( FindMode.EnabledInSelf ) is { } grabPoint )
+		if ( other.Components.Get<IGrabbable>( FindMode.EnabledInSelf ) is { } grabbable )
 		{
-			if ( HoveredGrabPoints.Contains( grabPoint ) )
+			if ( HoveredDirectory.Contains( grabbable ) )
 			{
-			//	HoveredGrabPoints.Remove( grabPoint );
+				//	HoveredDirectory.Remove( grabbable );
 			}
 		}
 	}

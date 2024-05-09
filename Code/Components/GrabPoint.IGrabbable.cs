@@ -5,16 +5,31 @@ public partial class GrabPoint
 	Hand IGrabbable.Hand => HeldHand;
 	bool IGrabbable.IsHeld => HeldHand.IsValid();
 
-	void IGrabbable.StartGrabbing( Hand hand )
+	bool IGrabbable.StartGrabbing( Hand hand )
 	{
-		HeldHand = hand;
-		OnStartGrabbing();
+		if ( Interactable?.Interact( hand, this ) ?? false )
+		{
+			HeldHand = hand;
+			OnStartGrabbing( hand );
+
+			return true;
+		}
+
+		return false;
 	}
 
-	void IGrabbable.StopGrabbing( Hand hand )
+	bool IGrabbable.StopGrabbing( Hand hand )
 	{
-		HeldHand = null;
-		OnStopGrabbing();
+		if ( Interactable?.StopInteract( this ) ?? false )
+		{
+			Log.Info( "On Stop Grabbing" );
+			HeldHand = null;
+			OnStopGrabbing( hand );
+
+			return true;
+		}
+
+		return false;
 	}
 
 	bool IGrabbable.CanStartGrabbing( BaseInteractable interactable, Hand hand )

@@ -88,7 +88,7 @@ public partial class Hand
 
 		if ( IsHolding() )
 		{
-			if ( CurrentGrabPoint is GrabPoint grabPoint )
+			if ( CurrentGrabbable is GrabPoint grabPoint )
 			{
 				grabPoint.UpdateHandPose( this );
 			}

@@ -48,14 +48,33 @@ public partial class GrabPoint : Component, IGrabbable
 	/// </summary>
 	public Hand HeldHand { get; set; }
 
-	public void OnStartGrabbing()
+	public void OnStartGrabbing( Hand hand )
 	{
 		OnGrabStartEvent?.Invoke();
+
+		NotifyGrabListeners( hand, true );
 	}
 
-	public void OnStopGrabbing()
+	public void OnStopGrabbing( Hand hand )
 	{
 		OnGrabEndEvent?.Invoke();
+
+		NotifyGrabListeners( hand, false );
+	}
+
+	void NotifyGrabListeners( Hand hand, bool start )
+	{
+		foreach ( var comp in Scene.GetAllComponents<IGrabbable.IGrabListener>() )
+		{
+			if ( start )
+			{
+				comp.OnGrabStart( Interactable, hand );
+			}
+			else
+			{
+				comp.OnGrabEnd( Interactable, hand );
+			}
+		}
 	}
 
 	/// <summary>
