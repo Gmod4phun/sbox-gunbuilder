@@ -118,12 +118,16 @@ public partial class Hand : Component, Component.ITriggerListener
 			Gizmo.Draw.Model( mdl, controller.Transform );
 		}
 
+		var flipMul = HandSource == HandSources.Right ? 1 : -1;
+
 		var tx = controller.Transform;
 		// Bit of a hack, but the alyx controllers have a weird origin that I don't care for.
 		tx = tx.Add( Vector3.Forward * -4f, false );
-		tx = tx.WithRotation( tx.Rotation.RotateAroundAxis( Vector3.Right, -30f ) );
+		tx = tx.Add( Vector3.Right * 0.5f * flipMul, false );
+		tx = tx.Add( Vector3.Up * -0.5f, false );
+		// tx = tx.WithRotation( tx.Rotation.RotateAroundAxis( Vector3.Right, -30f ) );
 
-		tx = tx.WithRotation( tx.Rotation * Rotation.From( 20, -5, 0 ) );
+		tx = tx.WithRotation( tx.Rotation * Rotation.From( 50, 30 * flipMul, 20 * flipMul ) );
 
 		var prevPosition = Transform.World.Position;
 
@@ -232,7 +236,7 @@ public partial class Hand : Component, Component.ITriggerListener
 		{
 			if ( HoveredGrabPoints.Contains( grabPoint ) )
 			{
-			//	HoveredGrabPoints.Remove( grabPoint );
+				//	HoveredGrabPoints.Remove( grabPoint );
 			}
 		}
 	}
