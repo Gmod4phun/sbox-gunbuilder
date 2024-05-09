@@ -11,11 +11,6 @@ public partial class Interactable : BaseInteractable
 	public IGrabbable SecondaryGrabPoint => heldGrabbables.FirstOrDefault( x => x.Tags.Has( "secondary" ) );
 
 	/// <summary>
-	/// The interactable's Rigidbody
-	/// </summary>
-	[Property] public Rigidbody Rigidbody { get; set; }
-
-	/// <summary>
 	/// The scale of the interactable's mass. Higher means heavier.
 	/// </summary>
 	[Property] public float MassScale { get; set; } = 1.0f;

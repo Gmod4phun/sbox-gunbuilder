@@ -7,6 +7,11 @@ using System.Collections.Immutable;
 public partial class BaseInteractable : Component
 {
 	/// <summary>
+	/// The interactable's Rigidbody
+	/// </summary>
+	[Property] public Rigidbody Rigidbody { get; set; }
+
+	/// <summary>
 	/// How long has it been since we started interacting / stopped interacting with this interactable?
 	/// </summary>
 	protected TimeSince TimeSinceInteract { get; set; } = 1;

@@ -1087,11 +1087,97 @@
         ]
       },
       {
+        "__guid": "af8b0e7c-4058-4455-a820-971948aca2f8",
+        "Flags": 0,
+        "Name": "Left Belt Pouch",
+        "Position": "12,16,22.04767",
+        "Rotation": "0.00000004470348,0.4999999,-0.000000007450581,0.8660254",
+        "Scale": "0.25,0.25,0.25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "c3b30b70-06d9-4776-82a2-b867e705d9e6",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/pouch.vmat",
+            "Model": "models/pouch.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "PlayerPouch",
+            "__guid": "3a1b95cc-41f8-4ac9-9fc0-de274ffbc21d",
+            "CanUseDuplicateMode": false,
+            "Player": {
+              "_type": "component",
+              "component_id": "03f36b68-bbfc-4df2-a42f-a83d1cad0e89",
+              "go": "bf22575b-c622-48df-b17d-a94bf3fb0a55",
+              "component_type": "Player"
+            },
+            "PouchRadius": 8
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "e8dca35f-8d6e-491f-811f-2fd5055508ab",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Radius": 10,
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "6c499d80-337a-4a5d-ac9d-b2963bb4fcb4",
+        "Flags": 0,
+        "Name": "Right Belt Pouch",
+        "Position": "12,-16,22.04767",
+        "Rotation": "0.00000005161914,0.4999999,-0.00000002980232,0.8660254",
+        "Scale": "0.25,0.25,0.25",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "7bf20269-5810-47bc-95f7-63ac3b48b519",
+            "BodyGroups": 18446744073709551615,
+            "MaterialOverride": "materials/pouch.vmat",
+            "Model": "models/pouch.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "PlayerPouch",
+            "__guid": "315e7a7b-b921-48ee-a9c8-5955064ce03e",
+            "CanUseDuplicateMode": false,
+            "Player": {
+              "_type": "component",
+              "component_id": "03f36b68-bbfc-4df2-a42f-a83d1cad0e89",
+              "go": "bf22575b-c622-48df-b17d-a94bf3fb0a55",
+              "component_type": "Player"
+            },
+            "PouchRadius": 8
+          },
+          {
+            "__type": "Sandbox.SphereCollider",
+            "__guid": "b16564a5-93f9-4ca2-ae99-298bcd4af4a5",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Radius": 10,
+            "Static": false
+          }
+        ]
+      },
+      {
         "__guid": "f88ffbb4-7f11-4895-9021-71068ff83577",
         "Flags": 0,
         "Name": "Weapon Pouch",
         "Position": "12,0,22.04767",
+        "Rotation": "-0.3535533,0.3535534,0.6123724,0.6123725",
         "Scale": "0.5,0.5,0.5",
+        "Enabled": true,
         "NetworkMode": 2,
         "NetworkInterpolation": true,
         "Components": [
