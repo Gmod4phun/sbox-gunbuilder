@@ -1,0 +1,137 @@
+{
+  "RootObject": {
+    "__guid": "32b044af-246c-495e-8b58-e2628bec5d26",
+    "Flags": 0,
+    "Name": "flashlight",
+    "Tags": "weapon",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "NetworkInterpolation": true,
+    "Components": [
+      {
+        "__type": "Sandbox.Rigidbody",
+        "__guid": "8289fe60-999f-4ea8-bf44-18f88c53edc9",
+        "AngularDamping": 0,
+        "Gravity": true,
+        "LinearDamping": 0,
+        "Locking": {},
+        "MassOverride": 0,
+        "MotionEnabled": true,
+        "RigidbodyFlags": 0,
+        "StartAsleep": false
+      },
+      {
+        "__type": "Interactable",
+        "__guid": "ee080150-2cb5-4333-9bfc-8da47cc4e1b4",
+        "MassScale": 1,
+        "Rigidbody": {
+          "_type": "component",
+          "component_id": "8289fe60-999f-4ea8-bf44-18f88c53edc9",
+          "go": "32b044af-246c-495e-8b58-e2628bec5d26",
+          "component_type": "Rigidbody"
+        }
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "143f776f-1a68-4987-94ab-c9d7328f0260",
+        "Flags": 0,
+        "Name": "Model",
+        "Position": "-2.132246,0,1.948381",
+        "Scale": "0.02,0.02,0.2",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ModelRenderer",
+            "__guid": "73cc82c7-fb63-4627-912c-c9b6a07c04dc",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/dev/box.vmdl",
+            "RenderType": "On",
+            "Tint": "0.04651,0.04651,0.04651,1"
+          },
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "d25e6670-46d6-4244-9ce2-6d423df42dfb",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "50,50,50",
+            "Static": false
+          }
+        ],
+        "Children": [
+          {
+            "__guid": "de648c8d-b420-48a7-8c79-e2a6550b0e08",
+            "Flags": 0,
+            "Name": "Spot Light",
+            "Position": "0.7264376,0,26.56577",
+            "Rotation": "0,-0.7071067,0,0.7071068",
+            "Scale": "50,50,5",
+            "Tags": "light_spot,light",
+            "Enabled": true,
+            "NetworkMode": 2,
+            "NetworkInterpolation": true,
+            "Components": [
+              {
+                "__type": "Sandbox.SpotLight",
+                "__guid": "4d5c9c54-3403-4aeb-bbbe-92dd1fe602dd",
+                "Attenuation": 1,
+                "ConeInner": 24,
+                "ConeOuter": 32,
+                "FogMode": "Enabled",
+                "FogStrength": 1,
+                "LightColor": "0.91373,0.98039,1,1",
+                "Radius": 300,
+                "Shadows": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "__guid": "4b2654d8-45ac-4ed6-9324-4a0c4a94f946",
+        "Flags": 0,
+        "Name": "Primary Grab",
+        "Position": "-2.1,0,0",
+        "Tags": "trigger",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "NetworkInterpolation": true,
+        "Components": [
+          {
+            "__type": "GrabPoint",
+            "__guid": "5b2784ea-b7b6-4a9c-bad6-8de833a35f25",
+            "Collider": {
+              "_type": "component",
+              "component_id": "d25e6670-46d6-4244-9ce2-6d423df42dfb",
+              "go": "143f776f-1a68-4987-94ab-c9d7328f0260",
+              "component_type": "BoxCollider"
+            },
+            "GrabInput": "Grip",
+            "Interactable": {
+              "_type": "component",
+              "component_id": "ba52f3f7-c2b4-48b0-9cf4-35dab29d3db0",
+              "go": "32b044af-246c-495e-8b58-e2628bec5d26",
+              "component_type": "Weapon"
+            },
+            "Preset": {
+              "Thumb": -1,
+              "Index": 1,
+              "Middle": 1,
+              "Ring": 1,
+              "Pinky": 1
+            },
+            "PresetDebugging": false
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
