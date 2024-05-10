@@ -1,3 +1,7 @@
+/// <summary>
+/// Something that is grabbable. Implementing this on a Component will make it so the player's hands
+/// will respond to grab events while you're colliding with it.
+/// </summary>
 public interface IGrabbable : IValid
 {
 	/// <summary>
@@ -64,9 +68,24 @@ public interface IGrabbable : IValid
 	/// </summary>
 	public GrabInputType GrabInput { get; }
 
+	/// <summary>
+	/// A grab listener. This is a component that listens to grab events from anything in the world.
+	/// Good for responding to events.
+	/// </summary>
 	public interface IGrabListener
 	{
+		/// <summary>
+		/// Called when anything in the world has started being grabbed.
+		/// </summary>
+		/// <param name="interactable"></param>
+		/// <param name="hand"></param>
 		void OnGrabStart( BaseInteractable interactable, Hand hand ) { }
+
+		/// <summary>
+		/// Called when anything in the world has stopped being grabbed.
+		/// </summary>
+		/// <param name="interactable"></param>
+		/// <param name="hand"></param>
 		void OnGrabEnd( BaseInteractable interactable, Hand hand ) { }
 	}
 }

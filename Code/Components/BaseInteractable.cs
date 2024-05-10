@@ -149,4 +149,9 @@ public partial class BaseInteractable : Component
 	{
 		TimeSinceInteract = 0;
 	}
+
+	public void FreezeMotion( bool frozen = true )
+	{
+		Rigidbody.MotionEnabled = !frozen;
+	}
 }

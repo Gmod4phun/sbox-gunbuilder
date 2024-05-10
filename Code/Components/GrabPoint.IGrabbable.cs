@@ -1,3 +1,6 @@
+/// <summary>
+/// Responsible for implementing IGrabbable.
+/// </summary>
 public partial class GrabPoint
 {
 	GameObject IGrabbable.GameObject => GameObject;
@@ -11,7 +14,6 @@ public partial class GrabPoint
 		{
 			HeldHand = hand;
 			OnStartGrabbing( hand );
-
 			return true;
 		}
 
@@ -22,23 +24,10 @@ public partial class GrabPoint
 	{
 		if ( Interactable?.StopInteract( this ) ?? false )
 		{
-			Log.Info( "On Stop Grabbing" );
 			HeldHand = null;
 			OnStopGrabbing( hand );
-
 			return true;
 		}
-
 		return false;
-	}
-
-	bool IGrabbable.CanStartGrabbing( BaseInteractable interactable, Hand hand )
-	{
-		return true;
-	}
-
-	bool IGrabbable.CanStopGrabbing( BaseInteractable interactable, Hand hand )
-	{
-		return true;
 	}
 }

@@ -68,7 +68,7 @@ public partial class Interactable : BaseInteractable
 		// If we're not holding this interactable anymore, turn its motion back on.
 		if ( heldGrabbables.Count <= 0 )
 		{
-			Rigidbody.MotionEnabled = true;
+			FreezeMotion( false );
 		}
 	}
 
@@ -80,8 +80,7 @@ public partial class Interactable : BaseInteractable
 	protected override void OnInteract( IGrabbable grabbable, Hand hand )
 	{
 		base.OnInteract( grabbable, hand );
-
-		Rigidbody.MotionEnabled = false;
+		FreezeMotion();
 	}
 
 	/// <summary>
@@ -98,7 +97,6 @@ public partial class Interactable : BaseInteractable
 		if ( SecondaryGrabPoint.IsValid() )
 		{
 			var direction = (SecondaryGrabPoint.Hand.Transform.Position - PrimaryGrabPoint.Hand.Transform.Position).Normal;
-			// TODO: Take into account the real rotation of the secondary grab point, so you can tilt the interactable from there.
 			targetRotation = Rotation.LookAt( direction, secondaryGrabPoint.Hand.Transform.Rotation.Up );
 		}
 

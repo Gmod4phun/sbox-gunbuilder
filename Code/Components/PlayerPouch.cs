@@ -1,5 +1,3 @@
-
-
 /// <summary>
 /// A pouch on the player. It can hold interactables.
 /// </summary>
@@ -21,14 +19,15 @@ public partial class PlayerPouch : Component, Component.ITriggerListener, IGrabb
 	[Property] public float PouchRadius { get; set; } = 4;
 
 	/// <summary>
-	/// Is the duplicate mode on? If on, it'll duplicate the held interactable instead of taking it.
+	/// How quick does the position lerp?
 	/// </summary>
-	[Property] public bool CanUseDuplicateMode { get; set; } = false;
-
 	[Property] public float LerpSpeed { get; set; } = 10f;
 
-	protected bool IsDuplicateModeOn { get; set; } = false;
-
+	/// <summary>
+	/// Called when anything in the world has started being grabbed.
+	/// </summary>
+	/// <param name="interactable"></param>
+	/// <param name="hand"></param>
 	void IGrabbable.IGrabListener.OnGrabStart( BaseInteractable interactable, Hand hand )
 	{
 		if ( interactable == HeldInteractable )
@@ -37,6 +36,11 @@ public partial class PlayerPouch : Component, Component.ITriggerListener, IGrabb
 		}
 	}
 
+	/// <summary>
+	/// Called when anything in the world has stopped being grabbed.
+	/// </summary>
+	/// <param name="interactable"></param>
+	/// <param name="hand"></param>
 	void IGrabbable.IGrabListener.OnGrabEnd( BaseInteractable interactable, Hand hand )
 	{
 		// Can't insert new.
@@ -45,13 +49,11 @@ public partial class PlayerPouch : Component, Component.ITriggerListener, IGrabb
 			return;
 		}
 
-		Log.Info( $"Stopped grabbing {interactable}" );
-
 		// Did we drop something in the vicinity of the pouch?
 		if ( interactable.Transform.Position.Distance( Transform.Position ) < PouchRadius )
 		{
 			HeldInteractable = interactable;
-			HeldInteractable.Rigidbody.MotionEnabled = false;
+			HeldInteractable.FreezeMotion();
 		}
 	}
 
