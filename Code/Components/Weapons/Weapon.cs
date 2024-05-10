@@ -270,7 +270,7 @@ public partial class Weapon : Interactable
 		// If we succeed to shoot, let's feed another bullet into the chamber from the mag.
 		if ( !TryFeedFromMagazine() )
 		{
-			SlideReleaseSystem?.TriggerEmpty();
+			SlideReleaseSystem?.PullManually();
 		}
 	}
 
