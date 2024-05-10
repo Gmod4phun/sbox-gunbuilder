@@ -25,6 +25,8 @@ public partial class PlayerPouch : Component, Component.ITriggerListener, IGrabb
 	/// </summary>
 	[Property] public bool CanUseDuplicateMode { get; set; } = false;
 
+	[Property] public float LerpSpeed { get; set; } = 10f;
+
 	protected bool IsDuplicateModeOn { get; set; } = false;
 
 	void IGrabbable.IGrabListener.OnGrabStart( BaseInteractable interactable, Hand hand )
@@ -57,8 +59,8 @@ public partial class PlayerPouch : Component, Component.ITriggerListener, IGrabb
 	{
 		if ( HeldInteractable.IsValid() )
 		{
-			HeldInteractable.Transform.Position = Transform.Position;
-			HeldInteractable.Transform.Rotation = Transform.Rotation;
+			HeldInteractable.Transform.Position = HeldInteractable.Transform.Position.LerpTo( Transform.Position, Time.Delta * LerpSpeed );
+			HeldInteractable.Transform.Rotation = Rotation.Lerp( HeldInteractable.Transform.Rotation, Transform.Rotation, Time.Delta * LerpSpeed );
 		}
 	}
 }
