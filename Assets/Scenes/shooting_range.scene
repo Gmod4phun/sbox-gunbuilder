@@ -10150,6 +10150,413 @@
       ]
     },
     {
+      "__guid": "e223f631-2131-4e47-b464-e0cc00dd9121",
+      "Flags": 0,
+      "Name": "big_button (2)",
+      "Position": "122.3186,-75.65319,59.19887",
+      "Rotation": "0.0000001376788,-0.7071067,-0.7071068,0.0000001376788",
+      "Tags": "interactable",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "c4dd2df5-9eb3-4f29-bf6f-be449f90bcfb",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": true,
+          "MaterialOverride": "models/props/big_button/big_button.vmat",
+          "Model": "models/big_button/big_button.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "8fcba080-7b34-4ca6-a12c-091a4f11ba84",
+          "Flags": 4,
+          "Name": "root",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "08d7882c-b39a-40a7-a3a4-a9fe114204a4",
+          "Flags": 1028,
+          "Name": "button",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "7cff2269-bce8-4e3e-8ce1-b393959c1726",
+          "Flags": 0,
+          "Name": "button_press",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.0000004023314,-1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Children": [
+            {
+              "__guid": "bd30c5d1-74ac-4a58-8de8-6724bb1a94e8",
+              "Flags": 0,
+              "Name": "button_press_grab",
+              "Position": "0,0,9.571308",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "GrabPoint",
+                  "__guid": "f76fc29c-28e4-4a6a-82a0-bc49cc07f6f0",
+                  "Collider": {
+                    "_type": "component",
+                    "component_id": "9c972215-59b2-4cc4-99a9-5d2066c7b7f5",
+                    "go": "bd30c5d1-74ac-4a58-8de8-6724bb1a94e8",
+                    "component_type": "SphereCollider"
+                  },
+                  "GrabInput": "Grip",
+                  "Interactable": {
+                    "_type": "component",
+                    "component_id": "d2954557-27f8-4ef2-b9de-004d213f166a",
+                    "go": "bd30c5d1-74ac-4a58-8de8-6724bb1a94e8",
+                    "component_type": "PointInteractable"
+                  },
+                  "Preset": {
+                    "Thumb": 1,
+                    "Index": 1,
+                    "Middle": 1,
+                    "Ring": 1,
+                    "Pinky": 1
+                  }
+                },
+                {
+                  "__type": "PointInteractable",
+                  "__guid": "d2954557-27f8-4ef2-b9de-004d213f166a",
+                  "AnglesAtOne": "0,0,0",
+                  "BoneGameObject": {
+                    "_type": "gameobject",
+                    "go": "08d7882c-b39a-40a7-a3a4-a9fe114204a4"
+                  },
+                  "CompletionValue": 0,
+                  "End": {
+                    "_type": "gameobject",
+                    "go": "98208d5a-5864-4fce-8a37-89171b8da139"
+                  },
+                  "OneSound": "sounds/weapons/mp5/mp5_handle_one.sound",
+                  "Renderer": {
+                    "_type": "component",
+                    "component_id": "c4dd2df5-9eb3-4f29-bf6f-be449f90bcfb",
+                    "go": "e223f631-2131-4e47-b464-e0cc00dd9121",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "ResetOnRelease": true,
+                  "Start": {
+                    "_type": "gameobject",
+                    "go": "7708432e-ee7b-4249-8529-474f4c25496a"
+                  },
+                  "ZeroSound": "sounds/weapons/mp5/mp5_handle_zero.sound"
+                },
+                {
+                  "__type": "Sandbox.SphereCollider",
+                  "__guid": "9c972215-59b2-4cc4-99a9-5d2066c7b7f5",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Radius": 1,
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "7708432e-ee7b-4249-8529-474f4c25496a",
+              "Flags": 0,
+              "Name": "button_press start",
+              "Position": "0.00004577637,-0.000003814678,8.395203",
+              "Rotation": "-0.00000000000004263256,-0.7071066,-0.00000000000001421085,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            },
+            {
+              "__guid": "98208d5a-5864-4fce-8a37-89171b8da139",
+              "Flags": 0,
+              "Name": "button_press end",
+              "Position": "-0.00003051758,0.000003814685,6.414211",
+              "Rotation": "0,0.7071067,0,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "14aa66af-d485-4c3f-a4d9-4e1cb6a01d63",
+      "Flags": 0,
+      "Name": "big_button (1)",
+      "Position": "115.591,-75.65322,59.1989",
+      "Rotation": "0.0000001376788,-0.7071067,-0.7071068,0.0000001376788",
+      "Tags": "interactable",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "af55b545-4161-455d-acda-5293c97be666",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": true,
+          "MaterialOverride": "models/props/big_button/big_button.vmat",
+          "Model": "models/big_button/big_button.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "4eade43d-53da-4bac-ad4f-633905c9077e",
+          "Flags": 4,
+          "Name": "root",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "658f8933-c01a-4852-b01e-7df95af74aa2",
+          "Flags": 1028,
+          "Name": "button",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "69130de9-b7ff-4362-af75-67297709674e",
+          "Flags": 0,
+          "Name": "button_press",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.0000004023314,-1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Children": [
+            {
+              "__guid": "db6f0eff-9fc2-46bc-871a-3681d7308aa7",
+              "Flags": 0,
+              "Name": "button_press_grab",
+              "Position": "0,0,9.571308",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "GrabPoint",
+                  "__guid": "36305594-806a-4f3a-bd74-0e0cd768ee0d",
+                  "Collider": {
+                    "_type": "component",
+                    "component_id": "c5044804-625e-4b72-85fe-31cb3c993260",
+                    "go": "db6f0eff-9fc2-46bc-871a-3681d7308aa7",
+                    "component_type": "SphereCollider"
+                  },
+                  "GrabInput": "Grip",
+                  "Interactable": {
+                    "_type": "component",
+                    "component_id": "2ab49e0b-60a8-48ee-80ce-c10165b48cfd",
+                    "go": "db6f0eff-9fc2-46bc-871a-3681d7308aa7",
+                    "component_type": "PointInteractable"
+                  },
+                  "Preset": {
+                    "Thumb": 1,
+                    "Index": 1,
+                    "Middle": 1,
+                    "Ring": 1,
+                    "Pinky": 1
+                  }
+                },
+                {
+                  "__type": "PointInteractable",
+                  "__guid": "2ab49e0b-60a8-48ee-80ce-c10165b48cfd",
+                  "AnglesAtOne": "0,0,0",
+                  "BoneGameObject": {
+                    "_type": "gameobject",
+                    "go": "658f8933-c01a-4852-b01e-7df95af74aa2"
+                  },
+                  "CompletionValue": 0,
+                  "End": {
+                    "_type": "gameobject",
+                    "go": "174ada9c-8aee-49d1-bd68-ff46640b701d"
+                  },
+                  "OnCompletionValue": {
+                    "__version": 7,
+                    "__guid": "0b79173d-85d4-4ff9-800d-3266cbe83a22",
+                    "UserData": {
+                      "Title": "On Completion Value",
+                      "ReferencedComponentTypes": [
+                        "package.local.gunbuilder/MovingTarget"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 0,
+                        "Type": "input"
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "scene.ref",
+                        "Properties": {
+                          "gameobject": {
+                            "_type": "gameobject",
+                            "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                          }
+                        },
+                        "UserData": {
+                          "Position": "0,176"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "384,176"
+                        }
+                      },
+                      {
+                        "Id": 4,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Distance",
+                          "_type": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "672,96"
+                        }
+                      },
+                      {
+                        "Id": 13,
+                        "Type": "op.equal",
+                        "UserData": {
+                          "Position": "208,48"
+                        }
+                      },
+                      {
+                        "Id": 15,
+                        "Type": "if",
+                        "UserData": {
+                          "Position": "480,64"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 2,
+                        "SrcName": "_result",
+                        "DstId": 3,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 15,
+                        "SrcName": "true",
+                        "DstId": 4,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 3,
+                        "SrcName": "_result",
+                        "DstId": 4,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Value": 0,
+                        "DstId": 4,
+                        "DstName": "_value"
+                      },
+                      {
+                        "SrcId": 0,
+                        "SrcName": "arg2",
+                        "DstId": 13,
+                        "DstName": "a"
+                      },
+                      {
+                        "Value": {
+                          "$type": "Simple",
+                          "Type": "System.Private.CoreLib/System.Single",
+                          "Value": 1
+                        },
+                        "DstId": 13,
+                        "DstName": "b"
+                      },
+                      {
+                        "SrcId": 13,
+                        "SrcName": "_result",
+                        "DstId": 15,
+                        "DstName": "condition"
+                      }
+                    ],
+                    "Defaults": {
+                      "$2.gameobject": {
+                        "_type": "gameobject",
+                        "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                      }
+                    }
+                  },
+                  "OneSound": "sounds/weapons/mp5/mp5_handle_one.sound",
+                  "Renderer": {
+                    "_type": "component",
+                    "component_id": "af55b545-4161-455d-acda-5293c97be666",
+                    "go": "14aa66af-d485-4c3f-a4d9-4e1cb6a01d63",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "ResetOnRelease": true,
+                  "Start": {
+                    "_type": "gameobject",
+                    "go": "98468da8-4819-4cc8-b2f6-43f4289d3b81"
+                  },
+                  "ZeroSound": "sounds/weapons/mp5/mp5_handle_zero.sound"
+                },
+                {
+                  "__type": "Sandbox.SphereCollider",
+                  "__guid": "c5044804-625e-4b72-85fe-31cb3c993260",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Radius": 1,
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "98468da8-4819-4cc8-b2f6-43f4289d3b81",
+              "Flags": 0,
+              "Name": "button_press start",
+              "Position": "0.00004577637,-0.000003814678,8.395203",
+              "Rotation": "-0.00000000000004263256,-0.7071066,-0.00000000000001421085,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            },
+            {
+              "__guid": "174ada9c-8aee-49d1-bd68-ff46640b701d",
+              "Flags": 0,
+              "Name": "button_press end",
+              "Position": "-0.00003051758,0.000003814685,6.414211",
+              "Rotation": "0,0.7071067,0,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "257835ee-c458-4000-86df-d6a33d779d84",
       "Flags": 0,
       "Name": "big_button",
@@ -10246,6 +10653,123 @@
                     "_type": "gameobject",
                     "go": "2778535c-cb66-4aa5-9c16-00f113bef6a4"
                   },
+                  "OnCompletionValue": {
+                    "__version": 7,
+                    "__guid": "c9181315-a8ff-4c29-ac3b-835b153f00cf",
+                    "UserData": {
+                      "Title": "On Completion Value",
+                      "ReferencedComponentTypes": [
+                        "package.local.gunbuilder/MovingTarget"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 0,
+                        "Type": "input"
+                      },
+                      {
+                        "Id": 1,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "288,208"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Distance",
+                          "_type": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "576,128"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "op.equal",
+                        "UserData": {
+                          "Position": "256,32"
+                        }
+                      },
+                      {
+                        "Id": 4,
+                        "Type": "if",
+                        "UserData": {
+                          "Position": "384,96"
+                        }
+                      },
+                      {
+                        "Id": 8,
+                        "Type": "scene.ref",
+                        "Properties": {
+                          "gameobject": {
+                            "_type": "gameobject",
+                            "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                          }
+                        },
+                        "UserData": {
+                          "Position": "0,208"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 8,
+                        "SrcName": "_result",
+                        "DstId": 1,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 4,
+                        "SrcName": "true",
+                        "DstId": 2,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_result",
+                        "DstId": 2,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Value": 5,
+                        "DstId": 2,
+                        "DstName": "_value"
+                      },
+                      {
+                        "SrcId": 0,
+                        "SrcName": "arg2",
+                        "DstId": 3,
+                        "DstName": "a"
+                      },
+                      {
+                        "Value": {
+                          "$type": "Simple",
+                          "Type": "System.Private.CoreLib/System.Single",
+                          "Value": 1
+                        },
+                        "DstId": 3,
+                        "DstName": "b"
+                      },
+                      {
+                        "SrcId": 3,
+                        "SrcName": "_result",
+                        "DstId": 4,
+                        "DstName": "condition"
+                      }
+                    ],
+                    "Defaults": {
+                      "$8.gameobject": {
+                        "_type": "gameobject",
+                        "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                      }
+                    }
+                  },
                   "OneSound": "sounds/weapons/mp5/mp5_handle_one.sound",
                   "Renderer": {
                     "_type": "component",
@@ -10329,7 +10853,7 @@
   },
   "Title": "shooting_range",
   "Description": "",
-  "LastSaved": "2024-05-10T19:27:48.9021631\u002B01:00",
+  "LastSaved": "2024-05-10T19:34:54.5917938\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
