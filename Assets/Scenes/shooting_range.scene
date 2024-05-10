@@ -10855,6 +10855,132 @@
                     "_type": "gameobject",
                     "go": "98208d5a-5864-4fce-8a37-89171b8da139"
                   },
+                  "OnCompletionValue": {
+                    "__version": 7,
+                    "__guid": "1ae5acd6-0c05-4da4-be92-91af85ac410c",
+                    "UserData": {
+                      "Title": "On Completion Value",
+                      "ReferencedComponentTypes": [
+                        "package.local.gunbuilder/MovingTarget"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 1,
+                        "Type": "input",
+                        "UserData": {
+                          "Position": "96,64"
+                        }
+                      },
+                      {
+                        "Id": 2,
+                        "Type": "scene.ref",
+                        "Properties": {
+                          "gameobject": {
+                            "_type": "gameobject",
+                            "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                          }
+                        },
+                        "UserData": {
+                          "Position": "96,240"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "scene.get",
+                        "Properties": {
+                          "T": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "480,240"
+                        }
+                      },
+                      {
+                        "Id": 4,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Distance",
+                          "_type": "package.local.gunbuilder/MovingTarget"
+                        },
+                        "UserData": {
+                          "Position": "768,160"
+                        }
+                      },
+                      {
+                        "Id": 5,
+                        "Type": "op.equal",
+                        "UserData": {
+                          "Position": "320,112"
+                        }
+                      },
+                      {
+                        "Id": 6,
+                        "Type": "if",
+                        "UserData": {
+                          "Position": "576,128"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 2,
+                        "SrcName": "_result",
+                        "DstId": 3,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 6,
+                        "SrcName": "true",
+                        "DstId": 4,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 3,
+                        "SrcName": "_result",
+                        "DstId": 4,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Value": 5,
+                        "DstId": 4,
+                        "DstName": "_value"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "arg2",
+                        "DstId": 5,
+                        "DstName": "a"
+                      },
+                      {
+                        "Value": {
+                          "$type": "Simple",
+                          "Type": "System.Private.CoreLib/System.Single",
+                          "Value": 1
+                        },
+                        "DstId": 5,
+                        "DstName": "b"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_signal",
+                        "DstId": 6,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 5,
+                        "SrcName": "_result",
+                        "DstId": 6,
+                        "DstName": "condition"
+                      }
+                    ],
+                    "Defaults": {
+                      "$2.gameobject": {
+                        "_type": "gameobject",
+                        "go": "21f30e32-d635-441e-aca8-a75f74140d9f"
+                      }
+                    }
+                  },
                   "OneSound": "sounds/weapons/mp5/mp5_handle_one.sound",
                   "Renderer": {
                     "_type": "component",
@@ -11462,7 +11588,7 @@
   },
   "Title": "shooting_range",
   "Description": "",
-  "LastSaved": "2024-05-10T19:52:53.567806\u002B01:00",
+  "LastSaved": "2024-05-10T19:56:00.7204815\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
