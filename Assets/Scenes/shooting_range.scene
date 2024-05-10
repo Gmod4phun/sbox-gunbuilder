@@ -9548,60 +9548,6 @@
       "__Prefab": "prefabs/interactables/usp/usp_magazine.prefab"
     },
     {
-      "__guid": "7180f630-988c-4889-b7a7-7fc847e4ea3f",
-      "Flags": 0,
-      "Name": "BouncingTarget",
-      "Position": "329.52,351.1749,46.95666",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "NetworkInterpolation": true,
-      "Components": [
-        {
-          "__type": "BouncingTarget",
-          "__guid": "aac90a17-669d-41c4-bab3-f7d7ed5f73e3",
-          "Distance": 2,
-          "Object": {
-            "_type": "gameobject",
-            "go": "cb762f17-97e6-4ab2-a269-948002825ace"
-          },
-          "Speed": 5,
-          "Triggered": true
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "cb762f17-97e6-4ab2-a269-948002825ace",
-          "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "NetworkInterpolation": true,
-          "Children": [
-            {
-              "__guid": "89333e1a-823c-4ec8-8bb2-039ed637bcbb",
-              "Flags": 0,
-              "Name": "Cube",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "NetworkInterpolation": true,
-              "Components": [
-                {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "d7784342-6f11-4284-b1f3-d093eeff58e8",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "__guid": "00a3117b-75fd-4c20-99f3-ab4d48e33b0a",
       "Flags": 0,
       "Name": "FlipUpTarget",
@@ -9696,6 +9642,341 @@
                   },
                   "SmoothingAngle": 40,
                   "Static": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__guid": "e0ce611c-5ac9-4c44-8905-2923eb846b9f",
+      "Flags": 0,
+      "Name": "Bouncing Target",
+      "Position": "148,360,184",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "BouncingTarget",
+          "__guid": "0e1f7232-7c9e-474c-aeb4-eef90e3e422c",
+          "Distance": 2,
+          "Object": {
+            "_type": "gameobject",
+            "go": "329f1b10-590c-4b28-ad1b-46ccd662143c"
+          },
+          "Speed": 4,
+          "Triggered": true
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "4ec4cbf0-f169-42de-88a3-fbc45eca8537",
+          "Flags": 0,
+          "Name": "Target",
+          "Position": "0,0,-112",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Children": [
+            {
+              "__guid": "329f1b10-590c-4b28-ad1b-46ccd662143c",
+              "Flags": 0,
+              "Name": "TargetItself",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Children": [
+                {
+                  "__guid": "3251f600-5e36-4da1-bc03-8aa6be85e14c",
+                  "Flags": 0,
+                  "Name": "Holder",
+                  "Position": "16.16188,0,0",
+                  "Rotation": "0,-0.7071067,0,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.MeshComponent",
+                      "__guid": "45b52e83-e687-4ecc-943b-539a9d3b964a",
+                      "Collision": "Mesh",
+                      "Color": "1,1,1,1",
+                      "IsTrigger": false,
+                      "Mesh": {
+                        "Topology": "H4sIAAAAAAAACk2Sh26DQBBEwcTYuMUlvTm99\u002BT/fy2ZJz2kQxpxsDNb5nZZVdVvMA94BsFp0AbjYBJsg0VwFFwFF8FlcBvcB4/Bc1ALcpTPKhgG06BRWxXcPf838tqil53g0DfPqMjbyF3LRdvZc62GGTbFeeoctXy4B\u002BYZ6cPCOP9mwb5ccuyap5YPd1nMvPI/3yNj80K/McfA/tdFrLXW1litN32vA73o72do7516Zjn2fmr7ZNZPY/3d9l6iOwnOzdd5/tYn9Geeibf2NjP/xFrX9tu5H\u002BSs1HHXH2r4vpHbqEf7qhaf7typsRp27E0uXj\u002B4b8Thw/0yN74\u002BBewicfhwf8wFXsxJHD7cd\u002BsTpxacfo/oDU85U4NZmIE4erTUREs/9MIM8KmB972H9EMvzMA3OfAaz9DjLxx2Al\u002B4a/aBO/nL0/dKj9Qh1z/0aFFCwAMAAA==",
+                        "Positions": [
+                          "-16,-16,16",
+                          "16,-16,16",
+                          "16,16,16",
+                          "-16,16,16",
+                          "-16,16,12.16188",
+                          "16,16,12.16188",
+                          "16,-16,12.16188",
+                          "-16,-16,12.16188",
+                          "16,4,12.16188",
+                          "16,4,16",
+                          "16,-4,12.16188",
+                          "16,-4,16",
+                          "112,-4,12.1619",
+                          "112,4,12.1619",
+                          "112,4,16.00002",
+                          "112,-4,16.00002"
+                        ],
+                        "TextureOrigin": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureRotation": [
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0"
+                        ],
+                        "TextureUAxis": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,1,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureVAxis": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,-1",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureScale": [
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25"
+                        ],
+                        "TextureOffset": [
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0"
+                        ],
+                        "TextureAngle": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "MaterialIndex": [
+                          -1,
+                          1,
+                          1,
+                          -1,
+                          1,
+                          1,
+                          -1,
+                          -1,
+                          -1,
+                          1,
+                          1,
+                          1,
+                          1
+                        ],
+                        "EdgeFlags": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "Materials": [
+                          "materials/metal_board/metal_board_01a.vmat",
+                          "materials/generic/metal_brushed.vmat"
+                        ]
+                      },
+                      "SmoothingAngle": 40,
+                      "Static": true
+                    }
+                  ]
+                },
+                {
+                  "__guid": "70d29f09-297d-462e-b69a-7a181fb5c378",
+                  "Flags": 0,
+                  "Name": "PaperTarget",
+                  "Position": "0,0,0",
+                  "Rotation": "0,-0.7071067,0,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.MeshComponent",
+                      "__guid": "da576a7d-ccfc-4528-837d-a5e951ea7e60",
+                      "Collision": "Mesh",
+                      "Color": "1,1,1,1",
+                      "IsTrigger": false,
+                      "Mesh": {
+                        "Topology": "H4sIAAAAAAAACk2MAQoAIAgDrSz7/4drBwoOjmKbczO7Ygg0hYuTHuB1hXgS/so\u002Bqi4vOdnOrb6NT15bJXy63JDz/\u002Bg6SXigAAAA",
+                        "Positions": [
+                          "-15.99997,-16,-0.000002861017",
+                          "15.99997,-16,0.000002861017",
+                          "15.99997,16,0.000002861017",
+                          "-15.99997,16,-0.000002861017"
+                        ],
+                        "TextureOrigin": [
+                          "148,-36,72"
+                        ],
+                        "TextureRotation": [
+                          "0,-0.7071067,0,0.7071068"
+                        ],
+                        "TextureUAxis": [
+                          "0,-1,0"
+                        ],
+                        "TextureVAxis": [
+                          "0,0,-1"
+                        ],
+                        "TextureScale": [
+                          "0.035,0.035"
+                        ],
+                        "TextureOffset": [
+                          "-517.7998,-505.2996"
+                        ],
+                        "TextureAngle": [
+                          0
+                        ],
+                        "MaterialIndex": [
+                          1
+                        ],
+                        "EdgeFlags": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "Materials": [
+                          "materials/dev/reflectivity_30.vmat",
+                          "textures/shooting_range_target.vmat"
+                        ]
+                      },
+                      "SmoothingAngle": 40,
+                      "Static": true,
+                      "Surface": "surfaces/wood.surface"
+                    }
+                  ]
                 }
               ]
             }
@@ -10150,6 +10431,334 @@
       ]
     },
     {
+      "__guid": "6fdeeb62-2de1-4cbc-a08a-b873d2dccbe8",
+      "Flags": 0,
+      "Name": "big_button (3)",
+      "Position": "116.3352,261.4714,59.19895",
+      "Rotation": "0.0000001376788,-0.7071067,-0.7071068,0.0000001376788",
+      "Tags": "interactable",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Sandbox.SkinnedModelRenderer",
+          "__guid": "86880c28-26e1-4df0-8bac-5b128488c2b8",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": true,
+          "MaterialOverride": "models/props/big_button/big_button.vmat",
+          "Model": "models/big_button/big_button.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ac5c70cd-af0a-4d0d-bd77-773dc5a1c925",
+          "Flags": 4,
+          "Name": "root",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "b11d8a87-25b6-4e6f-adcd-47d629e9229b",
+          "Flags": 1028,
+          "Name": "button",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true
+        },
+        {
+          "__guid": "bd4fb239-fc12-4b4e-a169-def6b08cfafb",
+          "Flags": 0,
+          "Name": "button_press",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.0000004023314,-1",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Children": [
+            {
+              "__guid": "190dad0f-f4c2-4860-935d-aa7dcf5a9fa2",
+              "Flags": 0,
+              "Name": "button_press_grab",
+              "Position": "0,0,9.571308",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true,
+              "Components": [
+                {
+                  "__type": "GrabPoint",
+                  "__guid": "0a69d668-1c16-418e-89a6-f0175df1ff17",
+                  "Collider": {
+                    "_type": "component",
+                    "component_id": "e57c28d5-880e-44ad-a953-cc3a5999a4b3",
+                    "go": "190dad0f-f4c2-4860-935d-aa7dcf5a9fa2",
+                    "component_type": "SphereCollider"
+                  },
+                  "GrabInput": "Grip",
+                  "Interactable": {
+                    "_type": "component",
+                    "component_id": "41b4b3fc-d1b8-4472-a47a-8b3d0ba371eb",
+                    "go": "190dad0f-f4c2-4860-935d-aa7dcf5a9fa2",
+                    "component_type": "PointInteractable"
+                  },
+                  "Preset": {
+                    "Thumb": 1,
+                    "Index": 1,
+                    "Middle": 1,
+                    "Ring": 1,
+                    "Pinky": 1
+                  }
+                },
+                {
+                  "__type": "PointInteractable",
+                  "__guid": "41b4b3fc-d1b8-4472-a47a-8b3d0ba371eb",
+                  "AnglesAtOne": "0,0,0",
+                  "BoneGameObject": {
+                    "_type": "gameobject",
+                    "go": "b11d8a87-25b6-4e6f-adcd-47d629e9229b"
+                  },
+                  "CompletionValue": 0,
+                  "End": {
+                    "_type": "gameobject",
+                    "go": "0042f449-9939-4e19-8c55-2e1f102b7b9b"
+                  },
+                  "OnCompletionValue": {
+                    "__version": 7,
+                    "__guid": "5cca45e8-da03-4827-b83e-0becd18270c3",
+                    "UserData": {
+                      "Title": "On Completion Value",
+                      "ReferencedComponentTypes": [
+                        "package.local.gunbuilder/BouncingTarget"
+                      ]
+                    },
+                    "Variables": [],
+                    "Nodes": [
+                      {
+                        "Id": 0,
+                        "Type": "input"
+                      },
+                      {
+                        "Id": 1,
+                        "Type": "op.equal",
+                        "UserData": {
+                          "Position": "256,48"
+                        }
+                      },
+                      {
+                        "Id": 3,
+                        "Type": "if",
+                        "UserData": {
+                          "Position": "432,16"
+                        }
+                      },
+                      {
+                        "Id": 4,
+                        "Type": "if",
+                        "UserData": {
+                          "Position": "640,48"
+                        }
+                      },
+                      {
+                        "Id": 6,
+                        "Type": "scene.ref",
+                        "Properties": {
+                          "gameobject": {
+                            "_type": "gameobject",
+                            "go": "e0ce611c-5ac9-4c44-8905-2923eb846b9f"
+                          }
+                        },
+                        "UserData": {
+                          "Position": "384,144"
+                        }
+                      },
+                      {
+                        "Id": 7,
+                        "Type": "scene.get",
+                        "ParentId": 6,
+                        "Properties": {
+                          "T": "package.local.gunbuilder/BouncingTarget"
+                        }
+                      },
+                      {
+                        "Id": 8,
+                        "Type": "property",
+                        "ParentId": 7,
+                        "Properties": {
+                          "_name": "Triggered",
+                          "_type": "package.local.gunbuilder/BouncingTarget"
+                        }
+                      },
+                      {
+                        "Id": 12,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Triggered",
+                          "_type": "package.local.gunbuilder/BouncingTarget"
+                        },
+                        "UserData": {
+                          "Position": "944,80"
+                        }
+                      },
+                      {
+                        "Id": 19,
+                        "Type": "property",
+                        "Properties": {
+                          "_name": "Triggered",
+                          "_type": "package.local.gunbuilder/BouncingTarget"
+                        },
+                        "UserData": {
+                          "Position": "944,176"
+                        }
+                      }
+                    ],
+                    "Links": [
+                      {
+                        "SrcId": 0,
+                        "SrcName": "arg2",
+                        "DstId": 1,
+                        "DstName": "a"
+                      },
+                      {
+                        "Value": {
+                          "$type": "Simple",
+                          "Type": "System.Private.CoreLib/System.Single",
+                          "Value": 1
+                        },
+                        "DstId": 1,
+                        "DstName": "b"
+                      },
+                      {
+                        "SrcId": 0,
+                        "SrcName": "_signal",
+                        "DstId": 3,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 1,
+                        "SrcName": "_result",
+                        "DstId": 3,
+                        "DstName": "condition"
+                      },
+                      {
+                        "SrcId": 3,
+                        "SrcName": "true",
+                        "DstId": 4,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 8,
+                        "SrcName": "_result",
+                        "DstId": 4,
+                        "DstName": "condition"
+                      },
+                      {
+                        "SrcId": 6,
+                        "SrcName": "_result",
+                        "DstId": 7,
+                        "DstName": "_this"
+                      },
+                      {
+                        "SrcId": 7,
+                        "SrcName": "_result",
+                        "DstId": 8,
+                        "DstName": "_target"
+                      },
+                      {
+                        "SrcId": 4,
+                        "SrcName": "true",
+                        "DstId": 12,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 7,
+                        "SrcName": "_result",
+                        "DstId": 12,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Value": false,
+                        "DstId": 12,
+                        "DstName": "_value"
+                      },
+                      {
+                        "SrcId": 4,
+                        "SrcName": "false",
+                        "DstId": 19,
+                        "DstName": "_signal"
+                      },
+                      {
+                        "SrcId": 7,
+                        "SrcName": "_result",
+                        "DstId": 19,
+                        "DstName": "_target"
+                      },
+                      {
+                        "Value": true,
+                        "DstId": 19,
+                        "DstName": "_value"
+                      }
+                    ],
+                    "Defaults": {
+                      "$6.gameobject": {
+                        "_type": "gameobject",
+                        "go": "e0ce611c-5ac9-4c44-8905-2923eb846b9f"
+                      }
+                    }
+                  },
+                  "OneSound": "sounds/weapons/mp5/mp5_handle_one.sound",
+                  "Renderer": {
+                    "_type": "component",
+                    "component_id": "86880c28-26e1-4df0-8bac-5b128488c2b8",
+                    "go": "6fdeeb62-2de1-4cbc-a08a-b873d2dccbe8",
+                    "component_type": "SkinnedModelRenderer"
+                  },
+                  "ResetOnRelease": true,
+                  "Start": {
+                    "_type": "gameobject",
+                    "go": "54abbd1f-364f-46c4-b9d4-b9ba9c05b991"
+                  },
+                  "ZeroSound": "sounds/weapons/mp5/mp5_handle_zero.sound"
+                },
+                {
+                  "__type": "Sandbox.SphereCollider",
+                  "__guid": "e57c28d5-880e-44ad-a953-cc3a5999a4b3",
+                  "Center": "0,0,0",
+                  "IsTrigger": false,
+                  "Radius": 1,
+                  "Static": false
+                }
+              ]
+            },
+            {
+              "__guid": "54abbd1f-364f-46c4-b9d4-b9ba9c05b991",
+              "Flags": 0,
+              "Name": "button_press start",
+              "Position": "0.00004577637,-0.000003814678,8.395203",
+              "Rotation": "-0.00000000000004263256,-0.7071066,-0.00000000000001421085,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            },
+            {
+              "__guid": "0042f449-9939-4e19-8c55-2e1f102b7b9b",
+              "Flags": 0,
+              "Name": "button_press end",
+              "Position": "-0.00003051758,0.000003814685,6.414211",
+              "Rotation": "0,0.7071067,0,0.7071068",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "NetworkInterpolation": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__guid": "e223f631-2131-4e47-b464-e0cc00dd9121",
       "Flags": 0,
       "Name": "big_button (2)",
@@ -10444,7 +11053,7 @@
                         "Id": 13,
                         "Type": "op.equal",
                         "UserData": {
-                          "Position": "208,48"
+                          "Position": "224,48"
                         }
                       },
                       {
@@ -10853,7 +11462,7 @@
   },
   "Title": "shooting_range",
   "Description": "",
-  "LastSaved": "2024-05-10T19:34:54.5917938\u002B01:00",
+  "LastSaved": "2024-05-10T19:52:53.567806\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
