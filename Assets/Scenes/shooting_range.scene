@@ -9704,10 +9704,10 @@
       ]
     },
     {
-      "__guid": "93601502-1905-4385-b0fd-9b5b76a5caad",
+      "__guid": "21f30e32-d635-441e-aca8-a75f74140d9f",
       "Flags": 0,
-      "Name": "MovingTarget",
-      "Position": "329.52,-20.73724,46.95666",
+      "Name": "MovingTarget (1)",
+      "Position": "148,-36,184",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -9718,37 +9718,318 @@
           "Distance": 0,
           "Object": {
             "_type": "gameobject",
-            "go": "452994a5-2da6-4163-8069-46235d05148f"
+            "go": "d84b4a63-3f65-4cbe-8b5b-181084b0e543"
           },
           "Speed": 5
         }
       ],
       "Children": [
         {
-          "__guid": "452994a5-2da6-4163-8069-46235d05148f",
+          "__guid": "16ef66f8-14ca-4e01-a0e0-a4a578186c3b",
           "Flags": 0,
-          "Name": "Object",
-          "Position": "0,0,0",
+          "Name": "Target",
+          "Position": "0,0,-112",
           "Enabled": true,
           "NetworkMode": 2,
           "NetworkInterpolation": true,
           "Children": [
             {
-              "__guid": "0f984ee0-7a68-4abe-9203-3799feacba45",
+              "__guid": "d84b4a63-3f65-4cbe-8b5b-181084b0e543",
               "Flags": 0,
-              "Name": "Cube",
+              "Name": "TargetItself",
               "Position": "0,0,0",
               "Enabled": true,
               "NetworkMode": 2,
               "NetworkInterpolation": true,
-              "Components": [
+              "Children": [
                 {
-                  "__type": "Sandbox.ModelRenderer",
-                  "__guid": "f089e200-fe36-4265-886e-3d51816bb95f",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/dev/box.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
+                  "__guid": "585a6ed0-79eb-44ee-959e-78cee2470a80",
+                  "Flags": 0,
+                  "Name": "Holder",
+                  "Position": "16.16188,0,0",
+                  "Rotation": "0,-0.7071067,0,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.MeshComponent",
+                      "__guid": "4f3edff9-4b23-4547-b8b4-f5747716cf0c",
+                      "Collision": "Mesh",
+                      "Color": "1,1,1,1",
+                      "IsTrigger": false,
+                      "Mesh": {
+                        "Topology": "H4sIAAAAAAAACk2Sh26DQBBEwcTYuMUlvTm99\u002BT/fy2ZJz2kQxpxsDNb5nZZVdVvMA94BsFp0AbjYBJsg0VwFFwFF8FlcBvcB4/Bc1ALcpTPKhgG06BRWxXcPf838tqil53g0DfPqMjbyF3LRdvZc62GGTbFeeoctXy4B\u002BYZ6cPCOP9mwb5ccuyap5YPd1nMvPI/3yNj80K/McfA/tdFrLXW1litN32vA73o72do7516Zjn2fmr7ZNZPY/3d9l6iOwnOzdd5/tYn9Geeibf2NjP/xFrX9tu5H\u002BSs1HHXH2r4vpHbqEf7qhaf7typsRp27E0uXj\u002B4b8Thw/0yN74\u002BBewicfhwf8wFXsxJHD7cd\u002BsTpxacfo/oDU85U4NZmIE4erTUREs/9MIM8KmB972H9EMvzMA3OfAaz9DjLxx2Al\u002B4a/aBO/nL0/dKj9Qh1z/0aFFCwAMAAA==",
+                        "Positions": [
+                          "-16,-16,16",
+                          "16,-16,16",
+                          "16,16,16",
+                          "-16,16,16",
+                          "-16,16,12.16188",
+                          "16,16,12.16188",
+                          "16,-16,12.16188",
+                          "-16,-16,12.16188",
+                          "16,4,12.16188",
+                          "16,4,16",
+                          "16,-4,12.16188",
+                          "16,-4,16",
+                          "112,-4,12.1619",
+                          "112,4,12.1619",
+                          "112,4,16.00002",
+                          "112,-4,16.00002"
+                        ],
+                        "TextureOrigin": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureRotation": [
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0",
+                          "0,0,0,0"
+                        ],
+                        "TextureUAxis": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,1,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureVAxis": [
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,-1",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0",
+                          "0,0,0"
+                        ],
+                        "TextureScale": [
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25",
+                          "0.25,0.25"
+                        ],
+                        "TextureOffset": [
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0",
+                          "0,0"
+                        ],
+                        "TextureAngle": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "MaterialIndex": [
+                          -1,
+                          1,
+                          1,
+                          -1,
+                          1,
+                          1,
+                          -1,
+                          -1,
+                          -1,
+                          1,
+                          1,
+                          1,
+                          1
+                        ],
+                        "EdgeFlags": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "Materials": [
+                          "materials/metal_board/metal_board_01a.vmat",
+                          "materials/generic/metal_brushed.vmat"
+                        ]
+                      },
+                      "SmoothingAngle": 40,
+                      "Static": true
+                    }
+                  ]
+                },
+                {
+                  "__guid": "91beb203-6ffe-48e0-8b24-f02d5c3163dd",
+                  "Flags": 0,
+                  "Name": "PaperTarget",
+                  "Position": "0,0,0",
+                  "Rotation": "0,-0.7071067,0,0.7071068",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "NetworkInterpolation": true,
+                  "Components": [
+                    {
+                      "__type": "Sandbox.MeshComponent",
+                      "__guid": "181c96a6-baf5-4d6e-9fb7-c6ad6b5d3a06",
+                      "Collision": "Mesh",
+                      "Color": "1,1,1,1",
+                      "IsTrigger": false,
+                      "Mesh": {
+                        "Topology": "H4sIAAAAAAAACk2MAQoAIAgDrSz7/4drBwoOjmKbczO7Ygg0hYuTHuB1hXgS/so\u002Bqi4vOdnOrb6NT15bJXy63JDz/\u002Bg6SXigAAAA",
+                        "Positions": [
+                          "-15.99997,-16,-0.000002861017",
+                          "15.99997,-16,0.000002861017",
+                          "15.99997,16,0.000002861017",
+                          "-15.99997,16,-0.000002861017"
+                        ],
+                        "TextureOrigin": [
+                          "148,-36,72"
+                        ],
+                        "TextureRotation": [
+                          "0,-0.7071067,0,0.7071068"
+                        ],
+                        "TextureUAxis": [
+                          "0,-1,0"
+                        ],
+                        "TextureVAxis": [
+                          "0,0,-1"
+                        ],
+                        "TextureScale": [
+                          "0.035,0.035"
+                        ],
+                        "TextureOffset": [
+                          "-517.7998,-505.2996"
+                        ],
+                        "TextureAngle": [
+                          0
+                        ],
+                        "MaterialIndex": [
+                          1
+                        ],
+                        "EdgeFlags": [
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0,
+                          0
+                        ],
+                        "Materials": [
+                          "materials/dev/reflectivity_30.vmat",
+                          "textures/shooting_range_target.vmat"
+                        ]
+                      },
+                      "SmoothingAngle": 40,
+                      "Static": true,
+                      "Surface": "surfaces/wood.surface"
+                    }
+                  ]
                 }
               ]
             }
@@ -9797,14 +10078,22 @@
           "__type": "Sandbox.SpotLight",
           "__guid": "878ce817-f64c-40d7-8cd4-479166b72765",
           "Attenuation": 0.11,
-          "ConeInner": 47.75,
-          "ConeOuter": 22.21,
+          "ConeInner": 8.84,
+          "ConeOuter": 19.06,
           "Cookie": "materials/effects/lightcookie.vtex",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
-          "Radius": 500,
+          "Radius": 1024,
           "Shadows": false
+        },
+        {
+          "__type": "LookAtLight",
+          "__guid": "9758a788-e807-4545-bd95-f5648aedb2f9",
+          "Target": {
+            "_type": "gameobject",
+            "go": "91beb203-6ffe-48e0-8b24-f02d5c3163dd"
+          }
         }
       ]
     },
@@ -10040,7 +10329,7 @@
   },
   "Title": "shooting_range",
   "Description": "",
-  "LastSaved": "2024-05-09T19:49:25.9175102\u002B01:00",
+  "LastSaved": "2024-05-10T19:27:48.9021631\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
@@ -10054,7 +10343,10 @@
     "facepunch.cable_reel_01",
     "facepunch.concrete_hs_01",
     "facepunch.concrete_pol_01",
+    "facepunch.corrugated_door_double_a_128",
     "facepunch.corrugated_wall_a_128",
+    "facepunch.corrugated_wall_a_sheet_128",
+    "facepunch.corrugated_wall_a_transparent",
     "facepunch.corrugated_wall_blend_a",
     "facepunch.corrugated_wall_doorframe_a_128",
     "facepunch.decal_damp_leak_01a",
@@ -10087,6 +10379,7 @@
     "facepunch.metal_board_01c",
     "facepunch.metal_brushed_a_hs",
     "facepunch.metal_galvanized",
+    "facepunch.metal_painted_blue_a_hs",
     "facepunch.metal_painted_c",
     "facepunch.metal_rust_a_hs",
     "facepunch.metal_trim_clean",
