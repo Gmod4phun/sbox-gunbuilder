@@ -2,7 +2,7 @@
 /// A grab point. This has to be on an interactable somewhere. This'll be something like a handle on a gun.
 /// Or just a point where we can hold something.
 /// </summary>
-public partial class GrabPoint : Component
+public partial class GrabPoint : Component, IGrabbable
 {
 	[Property] public Action OnGrabStartEvent { get; set; }
 	[Property] public Action OnGrabEndEvent { get; set; }
@@ -27,18 +27,6 @@ public partial class GrabPoint : Component
 	/// </summary>
 	[Property, Title( "Hand Preset" )] public HandPreset Preset { get; set; } = HandPreset.GripWithoutIndexFinger;
 
-	[Property] public bool PresetDebugging { get; set; } = false;
-
-	/// <summary>
-	/// What's our grabbing input type?
-	/// </summary>
-	public enum GrabInputType
-	{
-		Grip,
-		Trigger,
-		Hover
-	}
-
 	/// <summary>
 	/// What's our grabbing input type?
 	/// </summary>
@@ -60,19 +48,33 @@ public partial class GrabPoint : Component
 	/// </summary>
 	public Hand HeldHand { get; set; }
 
-	/// <summary>
-	/// Is this grab point being held by a player?
-	/// </summary>
-	public bool IsBeingHeld => HeldHand.IsValid();
-
-	public void OnStartGrabbing()
+	public void OnStartGrabbing( Hand hand )
 	{
 		OnGrabStartEvent?.Invoke();
+
+		NotifyGrabListeners( hand, true );
 	}
 
-	public void OnStopGrabbing()
+	public void OnStopGrabbing( Hand hand )
 	{
 		OnGrabEndEvent?.Invoke();
+
+		NotifyGrabListeners( hand, false );
+	}
+
+	void NotifyGrabListeners( Hand hand, bool start )
+	{
+		foreach ( var comp in Scene.GetAllComponents<IGrabbable.IGrabListener>() )
+		{
+			if ( start )
+			{
+				comp.OnGrabStart( Interactable, hand );
+			}
+			else
+			{
+				comp.OnGrabEnd( Interactable, hand );
+			}
+		}
 	}
 
 	/// <summary>
@@ -112,47 +114,5 @@ public partial class GrabPoint : Component
 	public virtual void UpdateHandPose( Hand hand )
 	{
 		hand.ApplyHandPreset( Preset );
-	}
-
-	SkinnedModelRenderer handGuide;
-	private void RecreateHandGuide()
-	{
-		handGuide?.GameObject?.Destroy();
-
-		var go = new GameObject();
-
-		var sm = go.Components.Create<SkinnedModelRenderer>();
-		sm.Model = Model.Load( "models/hands/alyx_hand_right.vmdl" );
-		handGuide = sm;
-
-		go.SetParent( this.GameObject, false );
-
-		sm.Set( "BasePose", 1 );
-		sm.Set( "bGrab", true );
-		sm.Set( "GrabMode", 1 );
-
-		if ( Preset is not null )
-		{
-			Preset.Apply( sm );
-		}
-	}
-
-	protected override void OnUpdate()
-	{
-		if ( Preset is not null && handGuide.IsValid() )
-		{
-			Preset.Apply( handGuide );
-		}
-
-		// Gizmo.Draw.Color = Color.Cyan.WithAlpha( 0.2f );
-		// Gizmo.Draw.Model( "models/hands/alyx_hand_right.vmdl", Transform.World );
-	}
-
-	protected override void OnStart()
-	{
-		if ( PresetDebugging )
-		{
-			RecreateHandGuide();
-		}
 	}
 }

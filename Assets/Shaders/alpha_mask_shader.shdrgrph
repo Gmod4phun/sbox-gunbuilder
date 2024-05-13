@@ -1,0 +1,85 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Translucent",
+  "nodes": [
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 0,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 0,
+      "Identifier": "0",
+      "Position": "592,32",
+      "Albedo": {
+        "Identifier": "5",
+        "Output": "RGB"
+      },
+      "Emission": {
+        "Identifier": "3",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 10,
+      "DefaultB": 10,
+      "Identifier": "1",
+      "Position": "-320,112"
+    },
+    {
+      "_class": "Fresnel",
+      "DefaultPower": 5,
+      "Identifier": "2",
+      "Position": "-48,-16"
+    },
+    {
+      "_class": "Multiply",
+      "DefaultA": 0,
+      "DefaultB": 5,
+      "Identifier": "3",
+      "Position": "192,80",
+      "A": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "B": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Cosine",
+      "Identifier": "4",
+      "Position": "-192,112",
+      "Input": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "VertexColor",
+      "Identifier": "5",
+      "Position": "368,-48"
+    },
+    {
+      "_class": "RemapValue",
+      "In": 0,
+      "InMin": -1,
+      "InMax": 1,
+      "OutMin": 0.49997678,
+      "OutMax": 1,
+      "Clamp": true,
+      "Identifier": "6",
+      "Position": "-32,112",
+      "A": {
+        "Identifier": "4",
+        "Output": "Result"
+      }
+    }
+  ]
+}

@@ -7,6 +7,11 @@ using System.Collections.Immutable;
 public partial class BaseInteractable : Component
 {
 	/// <summary>
+	/// The interactable's Rigidbody
+	/// </summary>
+	[Property] public Rigidbody Rigidbody { get; set; }
+
+	/// <summary>
 	/// How long has it been since we started interacting / stopped interacting with this interactable?
 	/// </summary>
 	protected TimeSince TimeSinceInteract { get; set; } = 1;
@@ -15,73 +20,86 @@ public partial class BaseInteractable : Component
 	/// Which grab points (that belong to this interactable) are currently being held by some grubby player hands?
 	/// </summary>
 
-	protected HashSet<GrabPoint> heldGrabPoints = new();
+	protected HashSet<IGrabbable> heldGrabbables = new();
 
-	protected virtual IEnumerable<GrabPoint> AllGrabPoints => Components.GetAll<GrabPoint>( FindMode.EnabledInSelfAndDescendants );
+	public virtual IEnumerable<IGrabbable> GrabbableDirectory => Components.GetAll<GrabPoint>( FindMode.EnabledInSelfAndDescendants );
 
 	/// <summary>
 	/// Gets you a hash set of the held grab points
 	/// </summary>
-	public virtual ImmutableHashSet<GrabPoint> HeldGrabPoints => ImmutableHashSet.CreateRange( heldGrabPoints );
+	public virtual ImmutableHashSet<IGrabbable> HeldGrabPoints => ImmutableHashSet.CreateRange( heldGrabbables );
 
 	/// <summary>
 	/// Is this interactable held by something?
 	/// </summary>
-	public virtual bool IsHeld => heldGrabPoints.Count( x => x.IsBeingHeld ) > 0;
+	public virtual bool IsHeld => heldGrabbables.Count( x => x.IsHeld ) > 0;
 
 	/// <summary>
 	/// A shorthand property to get the primary grab point for this interactable.
 	/// </summary>
-	public virtual GrabPoint PrimaryGrabPoint => AllGrabPoints.FirstOrDefault( x => x.IsPrimaryGrabPoint );
+	public virtual IGrabbable PrimaryGrabPoint => GrabbableDirectory.FirstOrDefault( x => !x.Tags.Has( "secondary" ) );
 
 	/// <summary>
 	/// An artificial delay between how long we can start a new/stop a current interaction
 	/// </summary>
 	protected const float InteractDelay = 0.4f;
 
-	protected virtual bool CanInteract( GrabPoint grabPoint, Hand hand )
+	public void SetGrabPointsEnabled( bool enabled )
+	{
+		foreach ( var grabPoint in GrabbableDirectory )
+		{
+			grabPoint.GameObject.Enabled = enabled;
+		}
+	}
+
+	protected virtual bool CanInteract( IGrabbable grabbable, Hand hand )
 	{
 		// Artificial delay.
 		if ( TimeSinceInteract < InteractDelay ) return false;
 
 		// already being held by someone's hands
-		if ( grabPoint.IsBeingHeld ) return false;
+		if ( grabbable.IsHeld ) return false;
 
 		// Is this really necessary?
 		if ( hand.IsHolding() ) return false;
 
 		// Final call, grab point, what do you think?
-		return grabPoint.CanStartGrabbing( this, hand );
+		return grabbable.CanStartGrabbing( this, hand );
 	}
 
 	/// <summary>
 	/// Can we stop interacting with this object? Normally called when releasing the grip.
 	/// </summary>
-	/// <param name="grabPoint"></param>
+	/// <param name="grabbable"></param>
 	/// <param name="hand"></param>
 	/// <returns></returns>
-	protected virtual bool CanStopInteract( GrabPoint grabPoint, Hand hand )
+	protected virtual bool CanStopInteract( IGrabbable grabbable, Hand hand )
 	{
 		if ( TimeSinceInteract < InteractDelay ) return false;
-
-		return grabPoint.CanStopGrabbing( this, hand );
+		return grabbable.CanStopGrabbing( this, hand );
 	}
 
 	/// <summary>
 	/// Called when a player's hand interacts with a grab point that's on this gameobject.
 	/// </summary>
-	/// <param name="grabPoint"></param>
+	/// <param name="grabbable"></param>
 	/// <param name="hand"></param>
-	public bool Interact( GrabPoint grabPoint, Hand hand )
+	public bool Interact( Hand hand, IGrabbable grabbable = null )
 	{
-		if ( !CanInteract( grabPoint, hand ) ) return false;
+		// Pick the first grab point if we didn't specify one.
+		grabbable ??= GrabbableDirectory.FirstOrDefault();
 
-		hand?.AttachModelToGrabPoint( grabPoint.GameObject );
-		grabPoint.HeldHand = hand;
-		heldGrabPoints.Add( grabPoint );
+		if ( !CanInteract( grabbable, hand ) ) return false;
 
-		grabPoint.OnStartGrabbing();
-		OnInteract( grabPoint, hand );
+		if ( hand.IsValid() )
+		{
+			hand.AttachModelTo( grabbable.GameObject );
+			hand.CurrentGrabbable = grabbable;
+		}
+
+		heldGrabbables.Add( grabbable );
+
+		OnInteract( grabbable, hand );
 
 		return true;
 	}
@@ -89,22 +107,23 @@ public partial class BaseInteractable : Component
 	/// <summary>
 	/// Called when a player's hand interacts with a grab point that's on this gameobject.
 	/// </summary>
-	/// <param name="grabPoint"></param>
-	public bool StopInteract( GrabPoint grabPoint )
+	/// <param name="grabbable"></param>
+	public bool StopInteract( IGrabbable grabbable )
 	{
-		var hand = grabPoint.HeldHand;
+		var hand = grabbable.Hand;
 
-		if ( !CanStopInteract( grabPoint, hand ) ) return false;
+		if ( !CanStopInteract( grabbable, hand ) ) return false;
 
-		Log.Info( $"> Stop interacting with {grabPoint}" );
+		Log.Info( $"> Stop interacting with {grabbable}" );
 
-		hand?.DetachModelFromGrabPoint();
+		if ( hand.IsValid() )
+		{
+			hand.DetachModelFrom();
+			hand.CurrentGrabbable = null;
+		}
 
-		heldGrabPoints.Remove( grabPoint );
-
-		OnStopInteract( grabPoint, hand );
-		grabPoint.OnStopGrabbing();
-		grabPoint.HeldHand = null;
+		heldGrabbables.Remove( grabbable );
+		OnStopInteract( grabbable, hand );
 
 		return true;
 	}
@@ -113,10 +132,10 @@ public partial class BaseInteractable : Component
 	/// <summary>
 	/// Called when we stop interacting with this object
 	/// </summary>
-	/// <param name="grabPoint"></param>
+	/// <param name="grabbable"></param>
 	/// <param name="hand"></param>
 	/// <returns></returns>
-	protected virtual void OnStopInteract( GrabPoint grabPoint, Hand hand )
+	protected virtual void OnStopInteract( IGrabbable grabbable, Hand hand )
 	{
 		TimeSinceInteract = 0;
 	}
@@ -124,35 +143,15 @@ public partial class BaseInteractable : Component
 	/// <summary>
 	/// Called when we start interactring with this opbject
 	/// </summary>
-	/// <param name="grabPoint"></param>
+	/// <param name="grabbable"></param>
 	/// <param name="hand"></param>
-	protected virtual void OnInteract( GrabPoint grabPoint, Hand hand )
+	protected virtual void OnInteract( IGrabbable grabbable, Hand hand )
 	{
 		TimeSinceInteract = 0;
 	}
 
-	protected override void OnFixedUpdate()
+	public void FreezeMotion( bool frozen = true )
 	{
-		if ( IsHeld )
-		{
-			HeldUpdate();
-		}
+		Rigidbody.MotionEnabled = !frozen;
 	}
-
-	/// <summary>
-	/// Called every update while we're holding this interactable.
-	/// </summary>
-	protected virtual void OnHeldUpdate()
-	{
-		//
-	}
-
-	/// <summary>
-	/// Called every update while holding this interactable.
-	/// </summary>
-	protected void HeldUpdate()
-	{
-		OnHeldUpdate();
-	}
-
 }

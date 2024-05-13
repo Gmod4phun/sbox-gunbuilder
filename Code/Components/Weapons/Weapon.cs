@@ -181,7 +181,7 @@ public partial class Weapon : Interactable
 	{
 		CurrentRecoilAmount = CurrentRecoilAmount.LerpTo( 0, Time.Delta * CalcRecoilDecay() );
 
-		if ( PrimaryGrabPoint?.HeldHand is { } hand )
+		if ( PrimaryGrabPoint?.Hand is { } hand )
 		{
 			if ( hand.IsTriggerDown() )
 			{
@@ -249,7 +249,13 @@ public partial class Weapon : Interactable
 		int count = 0;
 		foreach ( var tr in GetShootTrace() )
 		{
-			// TODO: Component.IDamageable
+			foreach ( var damageable in tr.GameObject.Root.Components.GetAll<IDamageable>( FindMode.EnabledInSelfAndDescendants ) )
+			{
+				damageable.OnDamage( new DamageInfo()
+				{
+					Damage = 25, Position = tr.EndPosition
+				} );
+			}
 
 			if ( tr.Hit )
 				CreateImpactEffects( tr.GameObject, tr.Surface, tr.EndPosition, tr.Normal );
@@ -264,7 +270,7 @@ public partial class Weapon : Interactable
 		// If we succeed to shoot, let's feed another bullet into the chamber from the mag.
 		if ( !TryFeedFromMagazine() )
 		{
-			SlideReleaseSystem?.TriggerEmpty();
+			SlideReleaseSystem?.PullManually();
 		}
 	}
 
@@ -287,6 +293,9 @@ public partial class Weapon : Interactable
 		{
 			rb.ApplyForce( EjectionPort.Transform.Rotation.Right * 1500000 );
 			rb.ApplyForce( EjectionPort.Transform.Rotation.Up * Game.Random.Float( 100000, 200000 ) );
+
+			//rb.AngularVelocity = EjectionPort.Transform.Rotation.Right * 10;
+			rb.AngularVelocity = worldBullet.Transform.Rotation.Forward * 10;
 		}
 	}
 

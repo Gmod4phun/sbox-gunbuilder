@@ -1,6 +1,8 @@
-using Sandbox;
 using System.Text.Json.Serialization;
 
+/// <summary>
+/// An ammo source.
+/// </summary>
 public interface IAmmoSource
 {
 	public IEnumerable<Bullet> Pop( int amount = 1 );
@@ -87,7 +89,7 @@ public sealed class WeaponMagazine : Component, IAmmoSource, Component.ITriggerL
 	}
 
 	/// <summary>
-	/// Adds a bullet to the top of the pile.
+	/// Adds X bullet(s) to the top of the pile.
 	/// </summary>
 	/// <param name="bullets"></param>
 	public int Push( params Bullet[] bullets )
@@ -110,6 +112,11 @@ public sealed class WeaponMagazine : Component, IAmmoSource, Component.ITriggerL
 		return pushed;
 	}
 
+	/// <summary>
+	/// Pops X bullet(s) out of the magazine and returns them.
+	/// </summary>
+	/// <param name="amount"></param>
+	/// <returns></returns>
 	public IEnumerable<Bullet> Pop( int amount = 1 )
 	{
 		var popped = new List<Bullet>();
@@ -128,6 +135,11 @@ public sealed class WeaponMagazine : Component, IAmmoSource, Component.ITriggerL
 		return popped;
 	}
 
+	/// <summary>
+	/// Checks to see if this magazine is compatible with the bullet.
+	/// </summary>
+	/// <param name="bullet"></param>
+	/// <returns></returns>
 	public bool IsCompatibleBullet( Bullet bullet )
 	{
 		return Caliber == bullet.Caliber;
