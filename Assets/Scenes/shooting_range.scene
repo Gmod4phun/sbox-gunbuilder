@@ -9653,7 +9653,7 @@
       "__guid": "e0ce611c-5ac9-4c44-8905-2923eb846b9f",
       "Flags": 0,
       "Name": "Bouncing Target",
-      "Position": "148,360,184",
+      "Position": "260.0913,360,184",
       "Enabled": true,
       "NetworkMode": 2,
       "NetworkInterpolation": true,
@@ -10322,7 +10322,7 @@
       "__guid": "dda8c8c1-92b9-4013-bce1-18448da618d6",
       "Flags": 0,
       "Name": "Spot Light (3)",
-      "Position": "137.0489,361.0815,7.164132",
+      "Position": "132.2056,361.175,40",
       "Rotation": "-0.0009496585,-0.09843343,-0.00960042,0.9950969",
       "Tags": "light_spot,light",
       "Enabled": true,
@@ -10331,16 +10331,24 @@
       "Components": [
         {
           "__type": "Sandbox.SpotLight",
-          "__guid": "233edf63-860b-4802-990a-36fc3615fc4a",
+          "__guid": "6e0369ec-39d1-4d8e-8420-0c11b69d7cef",
           "Attenuation": 0.11,
-          "ConeInner": 47.75,
-          "ConeOuter": 41.07,
+          "ConeInner": 8.84,
+          "ConeOuter": 19.06,
           "Cookie": "materials/effects/lightcookie.vtex",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.91373,0.98039,1,1",
-          "Radius": 500,
+          "Radius": 1024,
           "Shadows": false
+        },
+        {
+          "__type": "LookAtLight",
+          "__guid": "9de5df8a-3b52-48da-8e21-05713f016e55",
+          "Target": {
+            "_type": "gameobject",
+            "go": "70d29f09-297d-462e-b69a-7a181fb5c378"
+          }
         }
       ]
     },
@@ -11588,7 +11596,7 @@
   },
   "Title": "shooting_range",
   "Description": "",
-  "LastSaved": "2024-05-10T19:56:00.7204815\u002B01:00",
+  "LastSaved": "2024-05-10T19:59:25.2379865\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": [
